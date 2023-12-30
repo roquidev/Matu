@@ -1,0 +1,20 @@
+body {
+    font-family: 'Lato', sans-serif;
+    color: #444444;
+}
+
+
+/* Section Hero */
+.slogan-title {
+    font-size: 3rem;
+    color: #204B97;
+    font-weight: 600;
+}
+
+.slogan-subtitle {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+
+/* End Section Hero */
