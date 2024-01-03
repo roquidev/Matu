@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 # Local Applications
-APPS = [
+LOCAL_APPS = [
     'homepage',
 ]
 
@@ -42,23 +42,29 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.messages',
     # Styles for admin site
     'django.contrib.staticfiles',
-    'django.contrib.messages',
-    # Added
     'django.contrib.sites',
-    # 
+    # Allauth apps
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    # 
+    # Google Allauth
     'allauth.socialaccount.providers.google',
+    # Bootstrap Config
+    'crispy_forms',
+    'crispy_bootstrap5',
 
     'phonenumber_field',
-] + APPS
+] + LOCAL_APPS
 
-SITE_ID = 1
+# Aditional Boostrap5 Config
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+# Allauth Aditional Configurations
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -70,20 +76,6 @@ MIDDLEWARE = [
     # Add the account middleware:
     "allauth.account.middleware.AccountMiddleware",
 ]
-
-# Provider specific settings
-SOCIALACCOUNT_PROVIDERS = {
-    'google': {
-        'SCOPE': [
-            'profile',
-            'email',
-        ],
-        'AUTH_PARAMS': {
-            'access_type': 'online',
-        },
-        'OAUTH_PKCE_ENABLED': True,
-    }
-}
 
 ROOT_URLCONF = 'matu.urls'
 
@@ -98,10 +90,36 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # All auth
+                'django.template.context_processors.request',
             ],
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by email
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+SITE_ID = 1
+
+# Google Provider Configuration
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        },
+        'OAUTH_PKCE_ENABLED': True,
+    }
+}
 
 WSGI_APPLICATION = 'matu.wsgi.application'
 
@@ -141,7 +159,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'es-pe'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Lima'
 
 USE_I18N = True
 
@@ -152,6 +170,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+# Static files settings
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
@@ -163,10 +182,32 @@ LOGIN_URL = '/signin'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-AUTHENTICATION_BACKENDS = [
-    # Needed to login by username in Django admin, regardless of `allauth`
-    'django.contrib.auth.backends.ModelBackend',
+# Aditional configurations of Django-Allauth
+if DEBUG:
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+else:
+    # EMAIL_BACKEND = ["My own configuration"]
+    pass
 
-    # `allauth` specific authentication methods, such as login by email
-    'allauth.account.auth_backends.AuthenticationBackend',
-]
+# Adittional AllAuth configurations
+ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = True
+
+LOGIN_REDIRECT_URL = 'home'
+
+
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+
+ACCOUNT_CHANGE_EMAIL = True
+
+# VerIfica que un user este asociado a un unico email
+ACCOUNT_UNIQUE_EMAIL = True
+
+ACCOUNT_EMAIL_REQUIRED = True
+
+# Verificacion obligatoria por email para acceder
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 7
+
+# Log out automatically without alerts
+# ACCOUNT_LOGOUT_ON_GET  = True
