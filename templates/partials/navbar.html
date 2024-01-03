@@ -1,0 +1,46 @@
+{% load i18n %}
+<header class="p-3 mb-3 border-bottom">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">Matu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        
+        <ul class="navbar-nav m-auto d-flex gap-5">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/demo">Demo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav">
+            {% if user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link" href="/account/register_agency"><strong>Registra tu Agencia</strong></a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a> <!-- Cerrar sesion -->
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'profile' %}">
+                    <strong>{{ user.username }}</strong>
+                    <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                </a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a> <!-- Registrarse -->
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a> <!-- Iniciar Sesion-->
+                </li>
+            {% endif %}
+        </ul>
+</header>
