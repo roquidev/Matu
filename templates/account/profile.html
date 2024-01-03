@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="col-md-4 mx-auto">
+        <h2 class="text-center">
+            Perfil del usuario
+        </h2>
+        <h4  class="text-center">Bienvenido {{ user.username }} a Matu!</h4>
+        <p><strong>Nombre de usuario:</strong> {{ user.username }}</p>
+        <p><strong>Nombre:</strong> {{ user.first_name }}</p>
+        <p><strong>Apellido:</strong> {{ user.last_name }}</p>
+        <p><strong>Correo Electrónico:</strong> {{ user.email }}</p>
+    </div>
+{% endblock content %}
