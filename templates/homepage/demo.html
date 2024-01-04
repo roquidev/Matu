@@ -1,0 +1,107 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'main.css' %}" />
+<link rel="stylesheet" href="{% static 'demo.css' %}" />
+
+{% block content %}
+<!-- ======= Hero Section ======= -->
+<div class="desktop">
+    <div class="desktop1">
+        <div class="body">
+            <div class="header-component">
+                <div class="left-side">
+                    <div class="logo matu-logo">Matu</div>
+                    <button type="button" class="about-us">
+                        <img
+                            class="about-icon"
+                            alt="about-icon"
+                            src="{% static 'img/about-icon.svg' %}"
+                        />
+                        <div class="matu-logo">About us</div>
+                    </button>
+                    <button type="button" class="experiences">
+                        <img
+                            class="experiences-icon"
+                            alt="about-icon"
+                            src="{% static 'img/experiences-icon.svg' %}"
+                        />
+                        <div class="matu-logo">Experiencias</div>
+                    </button>
+                </div>
+                <div class="right-side">
+                    <button type="button" class="list-agency">
+                        Enlista tu agencia
+                    </button>
+                    <button class="register-button matu">Registrar</button>
+                    <button class="login-button matu">Ingresar</button>
+                </div>
+            </div>
+
+            <div class="banner-component">
+                <div class="slogan">
+                    <b class="banner-slogan">Encuentra tus próximos destinos</b>
+                    <div class="banner-text">Busca destinos turísticos ...</div>
+                </div>
+            </div>
+            <div class="searchbox-component">
+                <div class="searchbox">
+                    <div class="where">
+                        <div class="matu">Donde</div>
+                        <div class="explora-destinos">Explora Destinos</div>
+                    </div>
+                    <div class="date">
+                        <div class="matu">Fecha</div>
+                        <div class="explora-destinos">Agrega Fechas</div>
+                    </div>
+                    <div class="who">
+                        <div class="matu">Quién</div>
+                        <div class="explora-destinos">¿Cuantos?</div>
+                    </div>
+                    <div class="search-icon">
+                        <img
+                            class="circle-container-icon"
+                            alt=""
+                            src="{% static 'img/mag-glass-icon.svg' %}"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="explore-component">
+                <div class="slogan">
+                    <div class="matu">Explora Perú</div>
+                    <div class="estos-destinos-populares">
+                        Estos destinos populares tienen mucho que ofrecer
+                    </div>
+                </div>
+                <div class="carrusel">
+                    <div class="tacna">
+                        <div class="tacna-child"></div>
+                        <div class="matu">Tacna</div>
+                        <div class="matu">166 Paquetes</div>
+                    </div>
+                    <div class="tacna">
+                        <div class="tacna-child"></div>
+                        <div class="matu">Cerro de Pasco</div>
+                        <div class="matu">210 Paquetes</div>
+                    </div>
+                    <div class="tacna">
+                        <div class="tacna-child"></div>
+                        <div class="matu">Cusco</div>
+                        <div class="matu">321 Paquetes</div>
+                    </div>
+                    <div class="tacna">
+                        <div class="tacna-child"></div>
+                        <div class="matu">Arequipa</div>
+                        <div class="matu">241 Paquetes</div>
+                    </div>
+                    <div class="tacna">
+                        <div class="tacna-child"></div>
+                        <div class="matu">La Libertad</div>
+                        <div class="matu">123 Paquetes</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

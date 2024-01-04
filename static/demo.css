@@ -1,0 +1,367 @@
+@font-face {
+    font-family: Motiva-Light;
+    src: local("Motiva-Sans-Light"),
+        url("../static/fonts/Motiva-Sans-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Motiva-Bold;
+    src: local("Motiva-Sans-Bold"),
+        url("../static/fonts/Motiva-Sans-Bold.ttf") format("truetype");
+}
+
+body {
+    margin: 0;
+}
+
+.matu-logo {
+    position: relative;
+    font-family: Motiva-Bold;
+}
+.logo {
+    position: absolute;
+    top: -0.03rem;
+    left: 0;
+    width: 11.25rem;
+    height: 4.69rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.81rem;
+}
+.building-1-icon {
+    position: relative;
+    width: 1.25rem;
+    height: 1.25rem;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+/* Buttons */
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    transition: all 0.5s ease;
+}
+
+.header-component {
+    background-color: #fd9f48;
+    width: 120rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    padding: 0 22.5rem;
+    box-sizing: border-box;
+}
+
+/* left side */
+
+.left-side {
+    position: relative;
+    width: 23.44rem;
+    height: 9.38rem;
+    flex-shrink: 0;
+}
+
+.about-us {
+    top: 4.66rem;
+    left: 12.19rem;
+}
+.experiences {
+    top: 4.69rem;
+    left: 0;
+}
+
+.about-us,
+.experiences {
+    position: absolute;
+    border-radius: 24px;
+    background-color: #ffb066;
+    color: white;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    width: 11.25rem;
+    height: 3.63rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.81rem;
+    gap: 0.63rem;
+    font-size: 1rem;
+}
+
+.about-us:hover,
+.experiences:hover {
+    background-color: #ffc48d;
+}
+
+/* end left side */
+
+/* right side */
+
+.right-side {
+    position: relative;
+    width: 26.81rem;
+    margin-top: 1.4rem;
+    font-size: 1rem;
+    color: #fd9f48;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1.25rem;
+}
+
+.register-button,
+.login-button {
+    position: relative;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding: 0.9rem 1.3rem;
+    border: 1px solid #fd9f48;
+    color: #fd9f48;
+    font-weight: 900;
+}
+
+.register-button:hover,
+.login-button:hover {
+    background-color: #fd9f48;
+    color: #fff;
+    border: 1px solid white;
+}
+
+.list-agency {
+    position: relative;
+    font-weight: 600;
+    font-size: 0.9rem;
+    overflow: hidden;
+    color: #fff;
+    text-decoration: underline;
+    background: none;
+    border: none;
+}
+
+.list-agency:hover {
+    color: #ffd7b1;
+}
+
+/*end  right side */
+
+/* end Buttons */
+
+.banner-slogan {
+    position: relative;
+    display: inline-block;
+    width: 45.25rem;
+    font-family: Motiva-Bold;
+}
+.banner-text {
+    position: relative;
+    font-size: 2.19rem;
+    font-family: Inter;
+}
+.slogan {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.banner-component {
+    width: 120rem;
+    height: 21.75rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url("img/banner-home.jpeg");
+    padding: 3.44rem 22.5rem;
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+    font-size: 3.75rem;
+}
+
+.explora-destinos {
+    position: relative;
+    font-size: 0.94rem;
+    font-weight: 600;
+    color: #717171;
+}
+.date,
+.where {
+    background-color: #fff;
+    border-right: 2px solid #dedede;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.where {
+    align-self: stretch;
+    flex: 1;
+    overflow: hidden;
+    padding: 0.56rem 2.5rem;
+}
+.date {
+    padding: 0 2.5rem;
+}
+.circle-container-icon,
+.date,
+.who {
+    align-self: stretch;
+    flex: 1;
+    overflow: hidden;
+}
+.who {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 2.5rem;
+}
+.circle-container-icon {
+    position: relative;
+    border-radius: 100px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: fill;
+    background-color: #fd9f48;
+    padding: 15px;
+}
+.search-icon {
+    align-self: stretch;
+    width: 6.25rem;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.44rem 0.44rem 0.44rem 2.5rem;
+}
+.search-icon,
+.searchbox,
+.searchbox-component {
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.searchbox {
+    align-self: stretch;
+    border-radius: 100px;
+    background-color: #fff;
+    border: 2px solid #dedede;
+    height: 4.38rem;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.searchbox-component {
+    width: 75rem;
+    height: 6.38rem;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.63rem 0;
+    font-size: 1.25rem;
+    color: #000;
+}
+.estos-destinos-populares {
+    position: relative;
+    font-size: 1.13rem;
+    font-weight: 600;
+    color: #474747;
+}
+.tacna-child {
+    position: relative;
+    background: linear-gradient(66.25deg, #b42e11, #ffae63 47.92%, #fdf648);
+    width: 12.5rem;
+    height: 8.13rem;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.tacna {
+    background-color: #fff;
+    width: 13.75rem;
+    height: 13.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0.63rem;
+    box-sizing: border-box;
+    gap: 0.63rem;
+}
+.body,
+.carrusel,
+.desktop1,
+.explore-component {
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+}
+.carrusel {
+    align-self: stretch;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.25rem 0;
+    gap: 1.25rem;
+    font-size: 1.13rem;
+}
+.body,
+.desktop1,
+.explore-component {
+    flex-direction: column;
+}
+.explore-component {
+    align-self: stretch;
+    height: 27.88rem;
+    flex-shrink: 0;
+    align-items: flex-start;
+    padding: 0 0.63rem;
+    box-sizing: border-box;
+    font-size: 2.5rem;
+    color: #000;
+}
+.body,
+.desktop1 {
+    align-items: center;
+}
+.body {
+    background-color: #fff;
+    width: 120rem;
+    height: 67.5rem;
+    flex-shrink: 0;
+    padding: 0 22.5rem;
+    box-sizing: border-box;
+}
+.desktop1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.desktop {
+    position: relative;
+    width: 100%;
+    height: 67.5rem;
+    text-align: left;
+    font-size: 1.13rem;
+    color: #fff;
+    font-family: Motiva-Light;
+}
