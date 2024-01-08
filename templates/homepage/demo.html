@@ -1,6 +1,18 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'main.css' %}" />
 <link rel="stylesheet" href="{% static 'demo.css' %}" />
+<link rel="stylesheet" href="{% static 'slider.css' %}" />
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+/>
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+/>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
 {% block content %}
 <!-- ======= Hero Section ======= -->
@@ -42,61 +54,55 @@
                     <div class="banner-text">Busca destinos turísticos ...</div>
                 </div>
             </div>
+
             <div class="searchbox-component">
                 <div class="searchbox">
-                    <div class="where">
-                        <div class="matu">Donde</div>
-                        <div class="explora-destinos">Explora Destinos</div>
-                    </div>
-                    <div class="date">
-                        <div class="matu">Fecha</div>
-                        <div class="explora-destinos">Agrega Fechas</div>
-                    </div>
-                    <div class="who">
-                        <div class="matu">Quién</div>
-                        <div class="explora-destinos">¿Cuantos?</div>
-                    </div>
-                    <div class="search-icon">
+                    <input class="where" placeholder="Explora Destinos" />
+                    <input class="date" placeholder="Agrega Fechas" />
+                    <input class="who" placeholder="¿Cuantos?" />
+                    <button class="search-icon">
                         <img
                             class="circle-container-icon"
                             alt=""
                             src="{% static 'img/mag-glass-icon.svg' %}"
                         />
-                    </div>
+                    </button>
                 </div>
             </div>
-            <div class="explore-component">
-                <div class="slogan">
-                    <div class="matu">Explora Perú</div>
-                    <div class="estos-destinos-populares">
-                        Estos destinos populares tienen mucho que ofrecer
-                    </div>
+
+            <div class="explore-container">
+                <div class="title">Explora Perú</div>
+                <div class="content">
+                    Estos destinos populares tienen mucho que ofrecer
                 </div>
-                <div class="carrusel">
-                    <div class="tacna">
-                        <div class="tacna-child"></div>
-                        <div class="matu">Tacna</div>
-                        <div class="matu">166 Paquetes</div>
+            </div>
+
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="card">
+                        <div class="card-image"></div>
+                        <div class="card-content">Tacna</div>
+                        <div class="card-content">166 Paquetes</div>
                     </div>
-                    <div class="tacna">
-                        <div class="tacna-child"></div>
-                        <div class="matu">Cerro de Pasco</div>
-                        <div class="matu">210 Paquetes</div>
+                    <div class="card">
+                        <div class="card-image"></div>
+                        <div class="card-content">Cerro de Pasco</div>
+                        <div class="card-content">210 Paquetes</div>
                     </div>
-                    <div class="tacna">
-                        <div class="tacna-child"></div>
-                        <div class="matu">Cusco</div>
-                        <div class="matu">321 Paquetes</div>
+                    <div class="card">
+                        <div class="card-image"></div>
+                        <div class="card-content">Cusco</div>
+                        <div class="card-content">321 Paquetes</div>
                     </div>
-                    <div class="tacna">
-                        <div class="tacna-child"></div>
-                        <div class="matu">Arequipa</div>
-                        <div class="matu">241 Paquetes</div>
+                    <div class="card">
+                        <div class="card-image"></div>
+                        <div class="card-content">Arequipa</div>
+                        <div class="card-content">241 Paquetes</div>
                     </div>
-                    <div class="tacna">
-                        <div class="tacna-child"></div>
-                        <div class="matu">La Libertad</div>
-                        <div class="matu">123 Paquetes</div>
+                    <div class="card">
+                        <div class="card-image"></div>
+                        <div class="card-content">La Libertad</div>
+                        <div class="card-content">123 Paquetes</div>
                     </div>
                 </div>
             </div>
@@ -104,4 +110,14 @@
     </div>
 </div>
 
+<script>
+    $(document).ready(function () {
+        $(".slider").slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            prevArrow: $(".prev-btn"),
+            nextArrow: $(".next-btn"),
+        });
+    });
+</script>
 {% endblock content %}
