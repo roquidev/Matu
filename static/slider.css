@@ -1,0 +1,64 @@
+.explore-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 0 1.25rem;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: Motiva-Bold;
+
+    .title {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: black;
+    }
+
+    .content {
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: #474747;
+    }
+}
+
+.slider-container {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+}
+
+.card {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0.63rem;
+    box-sizing: border-box;
+}
+
+.card-image {
+    position: relative;
+    background: linear-gradient(66.25deg, #b42e11, #ffae63 47.92%, #fdf648);
+    width: 12.5rem;
+    height: 8.13rem;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-bottom: 5%;
+}
+
+.card-content {
+    color: black;
+    font-size: 1.13rem;
+    font-weight: 700;
+    font-family: Motiva-Bold;
+}
