@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "base.html" %}
 
 {% load static %}
 
@@ -21,8 +21,8 @@
         </div>
       </div>
     </div>
-
   </section>
+
 <!-- End Hero -->
 
 <main id="main">
@@ -53,11 +53,18 @@
               </div>
             </div>
           </div>
-  
+
         </div>
-      </section><!-- End Featured Services Section -->
-      
+      </section>
+      <!-- End Featured Services Section -->
+
 </main>
 
+  {% for photo_url in photo_urls %}
+    <card class="col-md-4">
+      <img src="{% url 'photo' %}" alt="">
+      <img src="{% url 'photo' %}" alt="">
+    </card>
+  {% endfor %}
 
 {% endblock content %}
