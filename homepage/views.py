@@ -17,6 +17,7 @@ def home(request):
     )
 
 
+# @login_required
 def blog(request):
     return render(
         request=request,
@@ -25,20 +26,13 @@ def blog(request):
 
 
 # @login_required
-def demo(request):
-    return render(
-        request=request,
-        template_name="homepage/demo.html",
-        context={}
-    )
-
-
 def profile(request):
     return render(
         request=request,
         template_name='account/profile.html',
         context={}
     )
+
 
 def signup(request):
     if request.method == "GET":
