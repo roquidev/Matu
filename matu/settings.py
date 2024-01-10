@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['*']
 # Local Applications
 LOCAL_APPS = [
     'homepage',
+    'accounts',
 ]
 
 INSTALLED_APPS = [
@@ -211,3 +212,9 @@ ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 7
 
 # Log out automatically without alerts
 # ACCOUNT_LOGOUT_ON_GET  = True
+
+
+# Define the media files directory
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
