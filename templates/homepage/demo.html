@@ -1,22 +1,29 @@
 {% extends "base.html" %}
 
 {% load static %}
-<link rel="stylesheet" href="{% static 'main.css' %}" />
-<link rel="stylesheet" href="{% static 'demo.css' %}" />
-<link rel="stylesheet" href="{% static 'slider.css' %}" />
 
-<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
-/>
-<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
-/>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+{% block title %}Demo{% endblock title %}
+
+{% block custom_styles %}
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+    <link rel="stylesheet" href="{% static 'demo.css' %}" />
+    <link rel="stylesheet" href="{% static 'slider.css' %}" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+{% endblock custom_styles %}
+
 
 {% block content %}
+
 <!-- ======= Hero Section ======= -->
 <div class="desktop">
     <div class="desktop1">

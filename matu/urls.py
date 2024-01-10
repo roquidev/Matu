@@ -29,6 +29,7 @@ urlpatterns = [
     # path('demo/', views.demo, name="demo"),
     path('', include('homepage.urls')),
     # path('', include('accounts.urls')),
+    path('', include('demo.urls')),
 ]
 
 if settings.DEBUG:
