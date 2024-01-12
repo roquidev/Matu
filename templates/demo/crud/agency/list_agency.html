@@ -1,0 +1,32 @@
+{% extends "demo/demo_base.html" %}
+{% load static %}
+
+{% block custom_styles %}
+<link rel="stylesheet" href="{% static 'demo/crud.css' %}">
+{% endblock custom_styles %}
+
+
+
+{% block content %}
+    <h2 style="color: black;">List of Agencies</h2>
+    <table class="table">
+        <thead class="table-light">
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Agency Name</th>
+                <th scope="col">Descripction</th>
+                <th scope="col">Phone Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for agency in agencies %}
+                <tr>
+                    <th scope="row">{{ agency.id }}</th>
+                    <td>{{ agency.name }}</td>
+                    <td>{{ agency.description }}</td>
+                    <td>{{ agency.phone_number }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+{% endblock content %}

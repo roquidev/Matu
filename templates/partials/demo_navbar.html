@@ -1,0 +1,46 @@
+{% load static %}
+{% load i18n %}
+
+<div class="header-component">
+    <div class="left-side">
+        <div class="logo matu-logo"><a href="{% url 'home' %}">Matu</a></div>
+        <button type="button" class="about-us">
+            <img
+                class="about-icon"
+                alt="about-icon"
+                src="{% static 'img/about-icon.svg' %}"
+            />
+            <div class="matu-logo"><a href="{% url 'home' %}">About us</a></div>
+        </button>
+        <button type="button" class="experiences">
+            <img
+                class="experiences-icon"
+                alt="about-icon"
+                src="{% static 'img/experiences-icon.svg' %}"
+            />
+            <div class="matu-logo">Experiencias</div>
+        </button>
+    </div>
+
+    {% if user.is_authenticated %}
+        <div class="right-side">
+            <button type="button" class="list-agency" href="/account/register_agency">
+                <a href="account/register_agency">Enlista tu agencia</a>
+            </button>
+        </div>
+    {% else %}
+        <div class="right-side">
+            <!-- Registrarse -->
+            <button class="register-button matu">
+                <a href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
+            </button>
+            <!-- Fin Registrarse -->
+            <!-- Iniciar Sesion-->
+            <button class="login-button matu">
+                <a href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
+            </button>
+            <!-- Fin Iniciar Sesion-->
+        </div>
+    {% endif %}
+
+</div>
