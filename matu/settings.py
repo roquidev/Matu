@@ -36,6 +36,7 @@ ALLOWED_HOSTS = ['*']
 LOCAL_APPS = [
     'homepage',
     'accounts',
+    'demo',
 ]
 
 INSTALLED_APPS = [
@@ -196,7 +197,6 @@ else:
 ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = True
 
 LOGIN_REDIRECT_URL = 'home'
-
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 
