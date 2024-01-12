@@ -3,4 +3,4 @@ from .models import UserDetails, TravelPackage, Agency
 
 
 # Register your models here.
-admin.site.register([UserDetails, TravelPackage, Agency])
+# admin.site.register([])
