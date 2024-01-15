@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Lista Agencias{% endblock title %}
+
+{% block custom_styles %}
+    <link rel="stylesheet" href="{% static 'demo/crud.css' %}">
+{% endblock custom_styles %}
+
+
+
+{% block content %}
+    
+    <div class="col-md-6 mx-auto text-center container-fluid vh-100">
+        <h2 class="subtitle">Update your Agency</h2>
+        {% if messages %}
+            <ul class="messages mt-4">
+                {% for message in messages %}
+                    <li {% if message.tags %} class="alert-success mx-auto" {% endif %}>{{  message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <span class="aux-btns mx-auto">
+            <a href="{% url 'list_agency' %}" class="mx-auto text-center">Ver todas</a>
+        </span>
+        <form action="{% url 'edit_agency' id=id %}" method="POST" class="form mb-10">
+            {% csrf_token %}
+            {{ agency_edit_form.as_p }}
+            <button type="submit" class="btn btn-success form-control mp-5">Enviar</button>
+        </form>
+    </div>
+{% endblock content %}

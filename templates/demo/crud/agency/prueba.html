@@ -1,0 +1,19 @@
+{% extends "demo/demo_base.html" %}
+{% load static %}
+
+{% block custom_styles %}
+    <link rel="stylesheet" href="{% static 'demo/crud.css' %}">
+{% endblock custom_styles %}
+
+
+    {% block content %}
+    <div class="container col-md-4 mx-auto" style="color: black;">
+        <form action="" class="form form">
+            {% csrf_token %}
+            {{ regis_agency_form.as_p }}
+        </form>
+        <h2>Estado</h2>
+        {{ estado }}
+    </div>
+    {% endblock content %}
+</div>

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Detalle Agencia{% endblock title %}
+
+{% block custom_styles %}
+    <link rel="stylesheet" href="{% static 'demo/crud.css' %}">
+{% endblock custom_styles %}
+
+
+{% block content %}
+    <main>
+        <span class="aux-btns back">
+            <a href="{% url 'list_agency' %}">Volver Atrás</a>
+        </span>
+        <ul class="list py-3">
+            <span><b>Nombre:</b></span>
+            <li>{{ agency.name }}</li>
+            <span><b>Descripción:</b></span>
+            <li>{{ agency.description }}</li>
+            <span><b>Teléfono de la Agencia:</b></span>
+            <li>{{ agency.phone_number }}</li>
+        </ul>
+    </main>
+{% endblock content %}

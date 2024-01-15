@@ -1,13 +1,18 @@
 # External modules
 from django.urls import path
-
 # Local modules
-from .views import demo, list_agency, register_agency, update_agency, delete_agency   # noqa: E501
+from .views import (demo, view_agency, register_agency,
+                    edit_agency,
+                    list_agency, confirm_delete_agency,
+                    prueba
+                    )   # noqa: E501
 
 urlpatterns = [
      path("demo/", demo, name="demo"),
-     path('demo/list_agency/', view=list_agency, name="list_agency"),
+     # Agency CRUD
+     path('demo/list_agency/', view=list_agency, name="list_agency"),  # noqa: E501
      path('demo/register_agency/', view=register_agency, name="register_agency"),  # noqa: E501
-     path('demo/update_agency/', view=update_agency, name="update_agency"),  # noqa: E501
-     path('demo/delete_agency/', view=delete_agency, name="delete_agency"),  # noqa: E501
+     path('demo/view_agency/<int:id>', view=view_agency, name="view_agency"),
+     path('demo/edit_agency/<int:id>', view=edit_agency, name="edit_agency"),  # noqa: E501
+     path('demo/confirm_delete_agency/<int:id>/', view=confirm_delete_agency, name="confirm_delete_agency"),  # noqa: E501
 ]

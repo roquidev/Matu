@@ -1,32 +1,34 @@
-{% extends "demo/demo_base.html" %}
+{% extends "base.html" %}
 {% load static %}
 
+{% block title %}Listar Agencias{% endblock title %}
+
 {% block custom_styles %}
-<link rel="stylesheet" href="{% static 'demo/crud.css' %}">
+    <link rel="stylesheet" href="{% static 'demo/crud.css' %}">
 {% endblock custom_styles %}
 
 
+    {% block content %}
 
-{% block content %}
-    <h2 style="color: black;">List of Agencies</h2>
-    <table class="table">
-        <thead class="table-light">
-            <tr>
-                <th scope="col">id</th>
-                <th scope="col">Agency Name</th>
-                <th scope="col">Descripction</th>
-                <th scope="col">Phone Number</th>
-            </tr>
-        </thead>
-        <tbody>
+    <main class="col-md-12 mx-auto">
+        <h2 class="subtitle">{{ user.username }} - Aqui tienes la lista de tus agencias</h2>
+        <span class="aux-btns">
+            <a href="{% url 'list_agency' %}">Ver todas</a>
+            <a href="{% url 'register_agency' %}">Añadir</a>
+        </span>
+        <ul class="list">
             {% for agency in agencies %}
-                <tr>
-                    <th scope="row">{{ agency.id }}</th>
-                    <td>{{ agency.name }}</td>
-                    <td>{{ agency.description }}</td>
-                    <td>{{ agency.phone_number }}</td>
-                </tr>
+                <li>
+                    <span>{{ agency.name }}</span>
+                    <span> 
+                        <a href="{% url 'view_agency' id=agency.id %}" class="btn btn-detail">Ver</a>
+                        <a href="{% url 'edit_agency' id=agency.id %}" class="btn btn-edit">Editar</a>
+                        <a href="{% url 'confirm_delete_agency' id=agency.id %}" class="btn btn-delete">Borrar</a>
+                    </span>
+                </li>
             {% endfor %}
-        </tbody>
-      </table>
-{% endblock content %}
+        </ul>
+    </main>
+
+    {% endblock content %}
+</div>
