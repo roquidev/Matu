@@ -11,6 +11,6 @@ urlpatterns = [
     # path('accounts/logout/', signout, name="logout"),
     # path('accounts/signin/', signin, name="signin"),
     path('accounts/profile/', profile, name="profile"),
-    path('blog/', blog, name="blog"),
+    # path('blog/', blog, name="blog"),
     # path('demo/', demo, name="demo"),
 ]

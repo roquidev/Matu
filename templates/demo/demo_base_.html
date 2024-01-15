@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,7 +8,8 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
 
-    <title>Matu - {% block title %}{% endblock title %}</title>
+    <title>Demo - {% block title %}{% endblock title %}</title>
+
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/headers/">
     
@@ -39,53 +41,49 @@
         }
       }
     </style>
-    <!-- Custom styles for this template -->
-    <link href="headers.css" rel="stylesheet">
 
-    {% block custom_styles %}{% endblock custom_styles %}
-  
+    
+    <link href="headers.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'demo/crud.css' %}">
+    
+    <!-- Custom Bse styles for this template -->
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+    <link rel="stylesheet" href="{% static 'demo/demo.css' %}" />
+    <link rel="stylesheet" href="{% static 'demo/slider.css' %}" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    {% block custom_styles %}
+    {% endblock custom_styles %}
   </head>
   
   <body>
-    <main>
-      <!--
 
-      <div class="container">
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-          <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-          </a>
+    <div class="desktop">
+      <div class="desktop1">
+          <div class="body">
+              
+              {% include "partials/demo_navbar.html" %}
+              {% block content %}
+              {% endblock content %}
 
-          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
-          </ul>
-
-          <div class="col-md-4 text-end">
-            <button type="button" class="btn btn-info me-2">Registrar Agencia</button>
-            <button type="button" class="btn btn-primary">Registrarse</button>
-            <button type="button" class="btn btn-outline-primary">Iniciar Sesion</button>
           </div>
-        </header>
       </div>
-
-      -->
-      
-      {% include 'partials/navbar.html' %}
-      <div class="container mt-5">
-        {% block content %}
-        {% endblock content %}
-      </div>
-      
-      {% block footer %}
-      {% endblock footer %}
-
-    </main>
-
+    </div>
+  {% include "partials/demo_footer.html" %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+    
+    {% block custom_scripts %}
+    {% endblock custom_scripts %}
+  
   </body>
 </html>

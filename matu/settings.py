@@ -37,6 +37,7 @@ LOCAL_APPS = [
     'homepage',
     'accounts',
     'demo',
+    'blog',
 ]
 
 INSTALLED_APPS = [

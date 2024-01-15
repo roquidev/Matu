@@ -4,7 +4,6 @@ from django.urls import path
 from .views import (demo, view_agency, register_agency,
                     edit_agency,
                     list_agency, confirm_delete_agency,
-                    prueba
                     )   # noqa: E501
 
 urlpatterns = [

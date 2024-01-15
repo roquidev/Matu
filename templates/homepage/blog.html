@@ -1,7 +1,30 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
-{% block title %}Blog{% endblock title %}
+{% load static %}
+
+{% block title %}Blog{% endblock %}
+
+{% block custom_styles %}
+    <link rel="stylesheet" href="{% static 'demo/crud.css' %}">
+{% endblock custom_styles %}
 
 {% block content %}
-        <h1 style="text-align: center;">This is the blog of website</h1>
-{% endblock content %}
+  <div class="row my-4 text-center">
+    <h1 style="text-align: center;">This is the blog of website</h1>
+
+    {% for post in posts %}
+      <div class="col-md-4 p-4">
+        <div class="card card-project">
+          <img src="{{ post.image.url }}" alt="{{ post.title }}" class="card-img-top" style="height: 250px;" />
+          <hr>
+          <div class="card-body">
+            <h1 style="font-size: 1.8rem;">{{ post.title }}</h1>
+            <p>{{ post.description|striptags|truncatechars:200 }}</p>
+            <p>{{ post.date|date:'M d Y'|upper }} - {{ post.user.user }}</p>
+            <a href="{% url 'post_detail' post.id %}" class="btn btn-info rounded-3">{{ post.title }}</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

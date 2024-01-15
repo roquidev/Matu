@@ -27,7 +27,7 @@ class UserProfile(models.Model):
 class Tourist(models.Model):
     user_profile = models.OneToOneField(UserProfile, on_delete=models.CASCADE, related_name='tourist_profile')  # noqa: E501
     bio = models.CharField(default="This is my biography...", max_length=200)
-    # image = models.ImageField(default='users/image_user.png', upload_to='users/')  # noqa: 501
+    image = models.ImageField(default='users/image_user.png', upload_to='users/')  # noqa: 501
     countryUser = CountryField(blank_label="Select country")
 
     class Meta:
