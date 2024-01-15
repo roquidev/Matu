@@ -1,6 +1,22 @@
 
-{% extends "demo/demo_base.html" %}
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Registro Agencia{% endblock title %}
+
+{% block custom_styles %}
+    <link rel="stylesheet" href="{% static 'generic/errorlist.css' %}">
+{% endblock custom_styles %}
+
 
 {% block content %}
-    <h1>Register your Agency here</h1>
+    <div class="container col-md-6 mx-auto text-center">
+        <h3 class="mb-3">Registra tu agencia en Matu</h3>
+        <hr>
+        <form action="" method="POST" class="form text-center">
+            {% csrf_token %}
+            {{ agency_form.as_p }}
+            <button class="btn btn-success form-control mp-5" type="submit">Registra Agencia</button>
+        </form>
+    </div>
 {% endblock content %}

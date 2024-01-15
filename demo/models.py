@@ -41,10 +41,11 @@ class Tourist(models.Model):
 class Agency(models.Model):
     # id = models.AutoField(primary_key=True)
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
-    name = models.CharField(blank=False, null=False, max_length=100)
+    name = models.CharField(unique=True, blank=False, null=False, max_length=100)  # noqa: E501
     # banner_image = models.ImageField(default='users/image_user.png', upload_to='users/')  # noqa: 501
     description = models.TextField(blank=True, null=True, help_text="Tell us about your agency...")  # noqa: E501
-    phone_number = PhoneNumberField(region='PE', null=False, blank=False)
+    # Investigar más acerca del valor default
+    phone_number = PhoneNumberField(region='PE', default='PE', null=False, blank=False)  # noqa: E501
 
     class Meta:
         verbose_name = 'Agency'
@@ -52,11 +53,11 @@ class Agency(models.Model):
         ordering = ['id']
 
     def __str__(self) -> str:
-        return self.name
+        return f"{self.name} - {self.user.user}"
 
 
 class TravelPackage(models.Model):
-    packageName = models.CharField(max_length=100)
+    packageName = models.CharField(unique=True, max_length=100)
     package_description = models.TextField(blank=True, null=True, help_text="Add a aditional description...")  # noqa: E501
     children = models.IntegerField(default=0)
     adults = models.IntegerField(default=1)
@@ -73,7 +74,7 @@ class TravelPackage(models.Model):
         (4, '4 starts'),
         (5, '5 starts'),
     ]
-    score = models.IntegerField(choices=SCORES_TO_CHOOSE, null=True)  # noqa: E501
+    score = models.IntegerField(choices=SCORES_TO_CHOOSE, default=None, null=True)  # noqa: E501
     agency = models.ForeignKey(Agency, on_delete=models.CASCADE)
 
     def price_woth_discount(self):

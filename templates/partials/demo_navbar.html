@@ -24,8 +24,8 @@
 
     {% if user.is_authenticated %}
         <div class="right-side">
-            <button type="button" class="list-agency" href="/account/register_agency">
-                <a href="account/register_agency">Enlista tu agencia</a>
+            <button type="button" class="list-agency">
+                <a href="{% url 'register_agency' %}">Registra tu agencia</a>
             </button>
         </div>
     {% else %}
