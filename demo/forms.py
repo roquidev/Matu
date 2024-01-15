@@ -1,5 +1,5 @@
 from django import forms
-from .models import Agency, UserProfile, TravelPackage
+from .models import Agency, UserProfile, TravelPackage, Tourist
 from phonenumber_field.widgets import PhoneNumberPrefixWidget
 
 
@@ -60,3 +60,9 @@ class TravelPackageForm(forms.ModelForm):
             # 'score': '',
             'agency': 'Nombre de la agencia',
         }
+
+
+class TouristForm(forms.ModelForm):
+    class Meta:
+        model = Tourist
+        fields = ['user_profile','bio','image','countryUser']

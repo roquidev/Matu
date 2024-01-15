@@ -30,6 +30,7 @@ urlpatterns = [
     path('', include('homepage.urls')),
     # path('', include('accounts.urls')),
     path('', include('demo.urls')),
+    path('', include('blog.urls')),
 ]
 
 if settings.DEBUG:
