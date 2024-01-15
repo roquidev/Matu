@@ -28,56 +28,46 @@ def demo(request):
 # ----------- Agency CRUD ----------- #
 
 def list_agency(request):
-    # con -1 te trae el usuario actual
-    # Falta contemplar cuando el id es None
-    user_authenticated_id = request.user.id - 1  # if request.user.id is not None else None
-    # agencies = Agency.objects.filter(user_id=user_authenticated_id).all()
-    agencies = get_list_or_404(Agency, user_id=user_authenticated_id)
-    context = {
-        "agencies": agencies,
-    }
-    return render(
-        request=request,
-        template_name='demo/crud/agency/list_agency.html',
-        context=context
-    )
-
-
-def view_agency(request, id):
-    # agency = Agency.objects.get(id=id)
-    agency = get_object_or_404(Agency, id=id)
-    context = {
-        'agency': agency
-    }
-    return render(
-        request=request,
-        template_name='demo/crud/agency/agency_detail.html',
-        context=context
-    )
-
-
-def edit_agency(request, id):
-    # agency = Agency.objects.get(id=id)
-    agency = get_object_or_404(Agency, id=id)
-    if request.method == "GET":
-        agency_edit_form = AgencyForm(instance=agency)
+    if request.user.is_authenticated:
+        # con -1 te trae el usuario actual
+        # Falta contemplar cuando el id es None
+        user_authenticated_id = request.user.id - 1  # if request.user.id is not None else None
+        # agencies = Agency.objects.filter(user_id=user_authenticated_id).all()
+        agencies = get_list_or_404(Agency, user_id=user_authenticated_id)
         context = {
-            'agency_edit_form': agency_edit_form,
-            'id': id
+            "agencies": agencies,
         }
         return render(
             request=request,
-            template_name='demo/crud/agency/edit_agency.html',
+            template_name='demo/crud/agency/list_agency.html',
             context=context
         )
-    elif request.method == 'POST':
-        agency_edit_form = AgencyForm(request.POST, instance=agency)
-        if agency_edit_form.is_valid():
-            agency_edit_form.save()
-            # Message de django
-            messages.success(
-                request=request,
-                message=f'Agencia {agency.name } actualizada.')
+    else:
+        return redirect("account_login")
+
+
+def view_agency(request, id):
+    if request.user.is_authenticated:
+        # agency = Agency.objects.get(id=id)
+        agency = get_object_or_404(Agency, id=id)
+        context = {
+            'agency': agency
+        }
+        return render(
+            request=request,
+            template_name='demo/crud/agency/agency_detail.html',
+            context=context
+        )
+    else:
+        return redirect("account_login")
+
+
+def edit_agency(request, id):
+    if request.user.is_authenticated:
+        # agency = Agency.objects.get(id=id)
+        agency = get_object_or_404(Agency, id=id)
+        if request.method == "GET":
+            agency_edit_form = AgencyForm(instance=agency)
             context = {
                 'agency_edit_form': agency_edit_form,
                 'id': id
@@ -87,6 +77,25 @@ def edit_agency(request, id):
                 template_name='demo/crud/agency/edit_agency.html',
                 context=context
             )
+        elif request.method == 'POST':
+            agency_edit_form = AgencyForm(request.POST, instance=agency)
+            if agency_edit_form.is_valid():
+                agency_edit_form.save()
+                # Message de django
+                messages.success(
+                    request=request,
+                    message=f'Agencia {agency.name } actualizada.')
+                context = {
+                    'agency_edit_form': agency_edit_form,
+                    'id': id
+                }
+                return render(
+                    request=request,
+                    template_name='demo/crud/agency/edit_agency.html',
+                    context=context
+                )
+    else:
+        return redirect("account_login")
 
 
 def register_agency(request):
