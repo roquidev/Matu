@@ -1,0 +1,19 @@
+.navbarlanding {
+    background-color: #fd9f48 !important; /* New orange color */
+}
+
+.navbar .nav-link {
+    color: #FFFF; /* Replace with your desired color */
+}
+
+.navbar .nav-link-active {
+    color: #FFFF; /* Replace with your desired color */
+}
+
+
+.navbar .navbar-brand {
+    color: #FFFF;
+    font-size: 45px; /* You can adjust the font size as needed */
+    font-weight: bold; /* Make the text bold */
+}
+
