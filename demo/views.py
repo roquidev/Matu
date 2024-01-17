@@ -5,7 +5,7 @@ import json
 # External models import
 from django.contrib.auth.models import User
 # Local Models import
-from .models import UserProfile, Agency
+from .models import UserProfile, Agency, Tourist
 # ModelForms import
 from .forms import AgencyForm
 
@@ -51,7 +51,7 @@ def view_agency(request, id):
         # agency = Agency.objects.get(id=id)
         agency = get_object_or_404(Agency, id=id)
         context = {
-            'agency': agency
+            'agency': agency,
         }
         return render(
             request=request,
@@ -144,5 +144,58 @@ def confirm_delete_agency(request, id):
         template_name='demo/crud/agency/confirm_delete_agency.html',
         context=context
     )
+
+# ----------- End of Agency CRUD ----------- #
+
+
+# ----------- UserProfile CRUD ------------- #
+# def view_tourist(request):
+#     if request.user.is_authenticated:
+#         # con -1 te trae el usuario actual
+#         # Falta contemplar cuando el id es None
+#         user_authenticated_id = request.user.id - 1  # if request.user.id is not None else None
+#         # agencies = Agency.objects.filter(user_id=user_authenticated_id).all()
+#         agencies = get_list_or_404(Tour, user_id=user_authenticated_id)
+#         context = {
+#             "agencies": agencies,
+#         }
+#         return render(
+#             request=request,
+#             template_name='demo/crud/agency/list_agency.html',
+#             context=context
+#         )
+#     else:
+#         return redirect("account_login")
+
+def prueba(request, id):
+    pass
+
+
+def view_tourist(request, id):
+    if request.user.is_authenticated:
+        user_profile = get_object_or_404(UserProfile, user=request.user, user_type="tourist")
+
+        # El usuario es un Tourist
+        tourist = get_object_or_404(Tourist, user_profile=user_profile)
+
+        context = {
+            'tourist': tourist,
+            'id': id,
+            'user_profile': user_profile
+        }
+
+        return render(
+            request=request,
+            template_name='demo/crud/tourist/view_tourist.html',
+            context=context
+        )
+
+    elif request.user.is_authenticated and user_profile.user_type == 'tourism_agency':
+        # El usuario es una Tourism Agency
+        return view_agency(request=request, id=id)
+
+    else:
+        # Manejar cualquier otro caso (opcional)
+        return HttpResponse("Tipo de usuario desconocido")
 
 # ----------- End of Agency CRUD ----------- #
