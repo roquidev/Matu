@@ -3,7 +3,10 @@ from django.urls import path
 # Local modules
 from .views import (demo, view_agency, register_agency,
                     edit_agency,
-                    list_agency, confirm_delete_agency,
+                    list_agency,
+                    confirm_delete_agency,
+                    view_tourist,
+                    prueba,
                     )   # noqa: E501
 
 urlpatterns = [
@@ -14,4 +17,7 @@ urlpatterns = [
      path('demo/view_agency/<int:id>', view=view_agency, name="view_agency"),
      path('demo/edit_agency/<int:id>', view=edit_agency, name="edit_agency"),  # noqa: E501
      path('demo/confirm_delete_agency/<int:id>/', view=confirm_delete_agency, name="confirm_delete_agency"),  # noqa: E501
+     # Agency CRUD
+     path('demo/prueba/<int:id>/', view=prueba, name="prueba"),  # noqa: E501
+     path('demo/view_tourist/<int:id>/', view=view_tourist, name="view_tourist"),  # noqa: E501
 ]
