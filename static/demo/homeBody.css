@@ -1,0 +1,25 @@
+/* Add space between the header and the text */
+.slogan-title {
+    margin-top: 145px; /* Adjust the value to add more or less space */
+    font-size: 100px;
+    text-align: center;
+}
+
+/* Style the slogan subtitle */
+.slogan-subtitle {
+    font-size: 17px; /* You can adjust the font size as needed */
+    margin-top: 30px; /* Add space below the title */
+}
+
+/* Style the "Get Started" and "Watch Video" buttons */
+.btn-get-started,
+.btn-watch-video {
+    margin-top: 30px; /* Add space below the subtitle */
+}
+
+.slogan-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

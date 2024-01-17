@@ -1,7 +1,8 @@
 {% load i18n %}
 <header class="p-3 mb-3 border-bottom">
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top ">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbarlanding">
+
         <div class="container">
             <a class="navbar-brand" href="{% url 'home' %}">Matu</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -9,10 +10,10 @@
         
         <ul class="navbar-nav m-auto d-flex gap-5">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">Home</a>
+              <a class="nav-link" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/demo">Demo</a>
+                <a class="nav-link" aria-current="page" href="/demo">Demo</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'blog' %}">Blog</a>
