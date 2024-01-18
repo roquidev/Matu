@@ -1,0 +1,197 @@
+:root {
+    --primary-color: #fd9f48;
+    --secondary-color: #ffb066;
+    --text-color: #fff;
+    --button-radius: 24px;
+    --hover-color: #ffc48d;
+}
+
+/* Header */
+.header-component {
+    width: 100%;
+    max-width: 3000px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* Left Container */
+.left-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 9.38rem;
+}
+
+/* Menu Items */
+.menu-items {
+    margin-top: 1.4rem;
+    font-size: 1rem;
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 1.25rem;
+}
+
+/* Matu Logo */
+.matu-logo {
+    position: relative;
+    font-family: Motiva-Bold;
+    color: var(--text-color);
+
+    a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 2.81rem;
+    }
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    transition: all 0.5s ease;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* Button Text */
+.button-text {
+    a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 1rem;
+    }
+}
+
+/* Left Button */
+.left-button {
+    width: 11.25rem;
+    height: 3.63rem;
+    padding: 0 0.81rem;
+    border: 1px solid var(--text-color);
+    border-radius: 24px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.63rem;
+}
+
+.left-button:hover {
+    background-color: var(--hover-color);
+}
+
+/* Right Button */
+.right-button {
+    width: 9em;
+    height: 3.5rem;
+    border: 1px solid var(--primary-color);
+    background-color: var(--text-color);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.right-button:hover {
+    background-color: var(--primary-color);
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+}
+
+/* List Agency */
+#list-agency {
+    position: relative;
+    font-weight: 600;
+    font-size: 0.9rem;
+    overflow: hidden;
+    color: #fff;
+    text-decoration: underline;
+    background: none;
+    border: none;
+}
+
+#list-agency:hover {
+    color: var(--hover-color);
+}
+
+.right-container {
+    display: flex;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 760px) {
+    .left-container {
+        padding-left: 7%;
+    }
+
+    .right-button {
+        width: 8em;
+        height: 3rem;
+        font-size: 0.9rem;
+    }
+
+    .left-button {
+        width: 9rem;
+        height: 3rem;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .left-button {
+        width: 7rem;
+        height: 2.5rem;
+    }
+
+    .button-text {
+        margin-bottom: 4px;
+
+        a {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .header-component {
+        justify-content: space-between;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .left-container {
+        padding-left: 10%;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    .menu-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .right-button {
+        width: 7em;
+        height: 2.5rem;
+    }
+}

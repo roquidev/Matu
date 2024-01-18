@@ -1,0 +1,48 @@
+.slogan-title {
+    width: 45rem;
+    font-family: Motiva-Bold;
+    color: white;
+}
+.slogan-text {
+    font-size: 2.19rem;
+    font-family: Motiva-Light;
+}
+
+.banner-component {
+    width: 100vw;
+    max-width: 3000px;
+    height: 21.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/banner-home.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+    font-size: 3.75rem;
+}
+
+.slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+@media only screen and (max-width: 780px) {
+    .banner-component {
+        padding-left: 10%;
+    }
+
+    .slogan-text {
+        font-size: 1.9rem;
+    }
+
+    .slogan-title {
+        font-size: 2.3rem;
+        width: 90%;
+    }
+
+    .slogan {
+        left: 0;
+    }
+}
