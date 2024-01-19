@@ -2,21 +2,23 @@
 
 {% load static %}
 
-{% block title %}Home{% endblock title %}
+{% block title %}Home{%endblock title %} 
 
 {% block custom_styles %}
 <link rel="stylesheet" href="{% static 'demo/slider.css' %}" />
-{% endblock custom_styles %}
+<link rel="stylesheet" href="{% static 'demo/banner.css' %}" />
+<link rel="stylesheet" href="{% static 'demo/searchbox.css' %}" />
 
-
+{% endblock custom_styles %} 
 {% block content %}
-    <div class="banner-component">
-        <div class="slogan">
-            <b class="banner-slogan">Encuentra tus próximos destinos</b>
-            <div class="banner-text">Busca destinos turísticos ...</div>
-        </div>
+<div class="banner-component">
+    <div class="slogan">
+        <b class="slogan-title">Encuentra tus próximos destinos</b>
+        <div class="slogan-text">Busca destinos turísticos ...</div>
     </div>
+</div>
 
+<div class="content-container">
     <div class="searchbox-component">
         <div class="searchbox">
             <input class="where" placeholder="Explora Destinos" />
@@ -34,7 +36,6 @@
 
     <div class="explore-container">
         <div class="title">Explora Perú</div>
-        <h3 class="title"><a href="{% url 'list_agency' %}">Lista de agencias</a></h3>
         <div class="content">
             Estos destinos populares tienen mucho que ofrecer
         </div>
@@ -46,23 +47,27 @@
             <div class="card">
                 <div class="card-image"></div>
                 <div class="card-content">{{ package.package_name }}</div>
-                <div class="card-content">{{ package.total_packages }} Paquetes</div>
+
+                <div class="card-content">
+                    {{ package.total_packages }} Paquetes
+                </div>
             </div>
             {% endfor %}
         </div>
     </div>
 
-{% endblock content %}
+</div>
 
+{% endblock content %}
 {% block custom_scripts %}
-    <script>
-        $(document).ready(function () {
-            $(".slider").slick({
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                prevArrow: $(".prev-btn"),
-                nextArrow: $(".next-btn"),
-            });
+<script>
+    $(document).ready(function () {
+        $(".slider").slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            prevArrow: $(".prev-btn"),
+            nextArrow: $(".next-btn"),
         });
-    </script>
+    });
+</script>
 {% endblock custom_scripts %}
