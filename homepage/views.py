@@ -34,54 +34,54 @@ def profile(request):
     )
 
 
-def signup(request):
-    if request.method == "GET":
-        return render(
-            request=request,
-            template_name='signup.html',
-            context={
-                "form": UserCreationForm
-            }
-        )
-    else:
-        if request.POST["password1"] == request.POST["password2"]:
-            try:
-                # Register user
-                user = User.objects.create_user(
-                    username=request.POST["username"],
-                    password=request.POST["password1"]
-                )
-                user.save()
-                # Creating cookie
-                login(
-                    request=request,
-                    user=user,
-                    backend='django.contrib.auth.backends.ModelBackend'
-                )
-                return redirect("demo")
-            except IntegrityError:
-                return render(
-                    request=request,
-                    template_name="signup.html",
-                    context={
-                        "form": UserCreationForm,
-                        "error": "Username already exists"
-                    }
-                )
-        return render(
-            request=request,
-            template_name="signup.html",
-            context={
-                "form": UserCreationForm,
-                "error": "Password do not match"
-            }
-        )
+# def signup(request):
+#     if request.method == "GET":
+#         return render(
+#             request=request,
+#             template_name='signup.html',
+#             context={
+#                 "form": UserCreationForm
+#             }
+#         )
+#     else:
+#         if request.POST["password1"] == request.POST["password2"]:
+#             try:
+#                 # Register user
+#                 user = User.objects.create_user(
+#                     username=request.POST["username"],
+#                     password=request.POST["password1"]
+#                 )
+#                 user.save()
+#                 # Creating cookie
+#                 login(
+#                     request=request,
+#                     user=user,
+#                     backend='django.contrib.auth.backends.ModelBackend'
+#                 )
+#                 return redirect("demo")
+#             except IntegrityError:
+#                 return render(
+#                     request=request,
+#                     template_name="signup.html",
+#                     context={
+#                         "form": UserCreationForm,
+#                         "error": "Username already exists"
+#                     }
+#                 )
+#         return render(
+#             request=request,
+#             template_name="signup.html",
+#             context={
+#                 "form": UserCreationForm,
+#                 "error": "Password do not match"
+#             }
+#         )
 
 
-# @login_required
-def signout(request):
-    logout(request=request)
-    return redirect(to="home")
+# # @login_required
+# def signout(request):
+#     logout(request=request)
+#     return redirect(to="home")
 
 
 def signin(request):

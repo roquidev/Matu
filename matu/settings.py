@@ -56,10 +56,15 @@ INSTALLED_APPS = [
     # Google Allauth
     'allauth.socialaccount.providers.google',
     # Bootstrap Config
+    'django_bootstrap5',
     'crispy_forms',
     'crispy_bootstrap5',
-
+    # HUmanize module
+    'django.contrib.humanize',
+    # Phone number model
     'phonenumber_field',
+    # Datetimepicker module
+    'bootstrap_datepicker_plus',
 ] + LOCAL_APPS
 
 # Aditional Boostrap5 Config

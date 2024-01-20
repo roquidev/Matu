@@ -1,11 +1,12 @@
 from django.contrib import admin
-from .models import UserProfile, Tourist, Agency, TravelPackage
+from .models import Profile, Tourist, Agency, Package, Group
 # Register your models here.
 
 
 admin.site.register([
-    UserProfile,
+    Profile,
     Tourist,
     Agency,
-    TravelPackage
+    Package,
+    Group
 ])

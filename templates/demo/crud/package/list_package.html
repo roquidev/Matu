@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Listar Paquetes{% endblock title %}
+
+{% block custom_styles %}
+<link rel="stylesheet" href="{% static 'demo/crud.css' %}">
+{% endblock custom_styles %}
+
+
+{% block content %}
+<main class="col-md-12 mx-auto">
+    
+<span class="aux-btns gap-5">
+    <a href="{% url 'list_agency' %}" class="w-100">Ver agencias</a>
+    <a href="{% url 'add_package' id=agency.id %}" class="w-100 row">Añadir Paquete</a>
+</span>    
+
+<h2 class="subtitle text-center">Lista de Paquetes ({{ packages|length }})</h2>
+
+<div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+    {% for package in packages %}
+        <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">{{ package.package_name}}</h4>
+            </div>
+            <div class="card-body">
+            <h1 class="card-title pricing-card-title">${{ package.base_price }}
+                <small class="text-body-secondary fw-light">/adult</small>
+            </h1>
+            <ul class="list-unstyled mt-3 mb-4">
+                <li>10 users included</li>
+                <li>2 GB of storage</li>
+                <p>Descripcion: {{ package.package_description|truncatechars:20}}</p>
+                <li>Phone number support: {{ package.agency.phone_number }}</li>
+                <li>Calificacion: {{ package.score }}</li>
+                <h1>{{ package.available_slots }}</h1>
+                <li>
+                    <span>
+                        <a href="{% url 'edit_package' id=package.id %}" class="btn btn-detail">Editar Paquetes</a>
+                        <a href="{% url 'view_package' id=package.id %}" class="btn btn-edit">Ver Paquete</a>
+                        <a href="{% url 'confirm_delete_package' id=package.id %}" class="btn btn-delete">Borrar</a>
+                    </span>
+                </li>
+
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary">
+                Get
+            </button>
+            </div>
+        </div>
+        </div>
+    {% endfor %}
+
+</main>
+
+{% endblock content %}

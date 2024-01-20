@@ -1,0 +1,28 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block title %}Registro Paquete{% endblock title %}
+
+{% block custom_styles %}
+{{ form.media }}
+    <link rel="stylesheet" href="{% static 'generic/errorlist.css' %}">
+{% endblock custom_styles %}
+
+
+{% block content %}
+    <div class="container col-md-6 mx-auto text-center">
+        <h3 class="mb-3">Registra tus paquete en {{ agency.name }}</h3>
+        <hr>
+        <form action="" method="POST" class="form text-center">
+            {% csrf_token %}
+            {{ package_form.as_p }}
+            <button class="btn btn-success form-control mp-5" type="submit">Registra Agencia</button>
+        </form>
+    </div>
+{% endblock content %}
+
+{% block extra_scripts %}
+{% endblock extra_scripts %}
+

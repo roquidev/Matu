@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% load static %}
-
+{% load humanize %}
 {% block title %}Blog{% endblock %}
 
 {% block custom_styles %}
@@ -20,8 +20,8 @@
           <div class="card-body">
             <h1 style="font-size: 1.8rem;">{{ post.title }}</h1>
             <p>{{ post.description|striptags|truncatechars:200 }}</p>
-            <p>{{ post.date|date:'M d Y'|upper }} - {{ post.user.user }}</p>
-            <a href="{% url 'post_detail' post.id %}" class="btn btn-info rounded-3">{{ post.title }}</a>
+            <p><i>Publicado {{ post.timestamp|naturaltime }}</i></p>
+            <a href="{% url 'post_detail' post.id %}" class="btn btn-detail rounded-3 col-md-8">Ver mas</a>
           </div>
         </div>
       </div>

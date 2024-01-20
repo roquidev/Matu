@@ -5,12 +5,12 @@ from .models import Post
 # Renderiza todas las publicaciones o posts
 def render_post(request):
     posts = Post.objects.all()
+    # posts = get_object_or_404(Post, profile=request.user.id)
     return render(
         request=request,
         template_name="homepage/blog.html",
         context={
             "posts": posts,
-            "author_name": ""
         }
     )
 
