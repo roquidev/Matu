@@ -23,3 +23,25 @@
     justify-content: center;
     align-items: center;
 }
+
+.centered-image {
+    display: block;
+    margin: 0 auto; /* Centers horizontally */
+    max-width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintains aspect ratio */
+}
+
+/* Styling for the new text */
+.text-medium-new {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Add space below the text */
+    margin-left: 45px;
+    
+}
+
+/* Styling for the new image */
+.img-fluid-new {
+    max-width: 100%;
+    height: auto;
+}

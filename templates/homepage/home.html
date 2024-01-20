@@ -12,13 +12,43 @@
       <div class="row justify-content-center">
         <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
           <div class="slogan-container">
-            <h1 class="slogan-title" style="line-height: 1.2; font-size: 70px;">Un marketplace para agencias de turismo</h1>
+            <h1 class="slogan-title" style="line-height: 1.2; font-size: 60px;">Un marketplace para agencias de turismo</h1>
             <h3 class="slogan-subtitle">Centralizamos las agencias de turismo locales de los mayores destinos turísticos del mundo de forma simple y amigable</h3>
-            <div class="d-flex">
-                <a href="/demo" class="btn-get-started scrollto">Join waitlist</a>
-                <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            <div class="d-flex flex-column align-items-center"> <!-- Change the container to a column layout -->
+              <a href="/demo" class="btn-get-started scrollto">Join waitlist</a> <!-- Move the button above the image -->
+              <img src="{% static 'img/phone-landing.png' %}" alt="Phone Image" class="centered-image">
             </div>
-          </div>
+          
+            <div class="container text-center mt-5"> <!-- Add a container for the new content -->
+              <div class="row">
+                  <div class="col-md-8"> <!-- Increase the width of the left column -->
+                      <p class="text-medium-new text-bold" style="font-size: 45px;">Voluptatum deleniti atque corrupti quos dolores et quas</p> <!-- Use the new class for the text -->
+                      <img src="{% static 'img/2nd-image-landing.png' %}" alt="Second Image" class="img-fluid-new"> <!-- Use the new class for the image -->
+                  </div>
+              </div>
+            </div>
+
+            <div class="container text-center mt-5"> <!-- Add a container for the new content -->
+              <div class="row">
+                  <div class="col-md-8"> <!-- Increase the width of the left column -->
+                      <p class="text-medium-new text-bold" style="font-size: 45px;">Voluptatum deleniti atque corrupti quos dolores et quas</p> <!-- Use the new class for the text -->
+                      <img src="{% static 'img/3rd-img-landing.png' %}" alt="Second Image" class="img-fluid-new"> <!-- Use the new class for the image -->
+                  </div>
+              </div>
+            </div>
+
+            <div class="container text-center mt-5"> <!-- Add a container for the new content -->
+              <div class="row">
+                  <div class="col-md-8"> <!-- Increase the width of the left column -->
+                      <p class="text-medium-new text-bold" style="font-size: 45px;">Voluptatum deleniti atque corrupti quos dolores et quas</p> <!-- Use the new class for the text -->
+                      <img src="{% static 'img/2nd-image-landing.png' %}" alt="Second Image" class="img-fluid-new"> <!-- Use the new class for the image -->
+                  </div>
+              </div>
+            </div>
+
+
+
+
         </div>
         <!-- <div class="col-lg-6 order-1 order-lg-2 hero-img">
           <img src="{% static 'img/travel-the-world.jpg' %}" class="img-fluid animated" alt="">
