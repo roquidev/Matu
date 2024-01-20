@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Detalle Paquete{% endblock title %}
+
+{% block custom_styles %}
+    <link rel="stylesheet" href="{% static 'demo/crud.css' %}">
+{% endblock custom_styles %}
+
+
+{% block content %}
+    <main>
+
+        <span class="aux-btns back">
+            <a href="{% url 'list_package' id=agency.id %}">Volver Atrás</a>
+        </span>
+
+        <ul class="list py-3">
+            <span><b>Nombre:</b></span>
+            <li>{{ package.package_name }}</li>
+            <span><b>Descripción:</b></span>
+            <li>{{ package.package_description }}</li>
+            <li>
+                <b>Adultos:</b>{{ package.adults }}
+                <b>Niños:</b>{{ package.children }}
+                <b>Total:</b> {{ total_number_people}}
+                <b>Cupos:</b> {{ package.available_slots }}
+            </li>
+            <li>
+                <b>Check In:</b>{{ package.check_in }}
+                <b>Check Out:</b>{{ package.check_out }}
+            </li>
+        
+            <li>
+                <b>precio Base (USD):</b>{{ package.base_price }}
+                <b>Descuento (%):</b>{{ package.discount }}
+                <b>Precio oferta (USD):</b>{{ final_price }}
+            </li>
+
+            <span><b>Comentarios:</b></span>
+            <li>{{ package.comments }}</li>
+            
+            <span><b>Calificación:</b></span>
+            <li>{{ package.score }}</li>
+        </ul>
+    </main>
+{% endblock content %}

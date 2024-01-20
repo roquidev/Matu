@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %}Editar Agencias{% endblock title %}
+{% block title %}Editar Package{% endblock title %}
 
 {% block custom_styles %}
     <link rel="stylesheet" href="{% static 'demo/crud.css' %}">
@@ -13,7 +13,7 @@
 {% block content %}
     
     <div class="col-md-6 mx-auto text-center container-fluid vh-100">
-        <h2 class="subtitle">Update your Agency</h2>
+        <h2 class="subtitle">Update your Package</h2>
         {% if messages %}
             <ul class="messages mt-4">
                 {% for message in messages %}
@@ -22,11 +22,11 @@
             </ul>
         {% endif %}
         <span class="aux-btns mx-auto">
-            <a href="{% url 'list_agency' %}" class="mx-auto text-center">Ver todas</a>
+            <a href="{% url 'list_package' id=agency.id  %}" class="mx-auto text-center">Ver todas</a>
         </span>
-        <form action="{% url 'edit_agency' id=id %}" method="POST" class="form mb-10">
+        <form action="{% url 'edit_package' id=id %}" method="POST" class="form mb-10">
             {% csrf_token %}
-            {{ agency_edit_form.as_p }}
+            {{ package_edit_form.as_p }}
             <button type="submit" class="btn btn-success form-control mp-5">Enviar</button>
         </form>
     </div>
