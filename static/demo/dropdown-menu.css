@@ -1,0 +1,63 @@
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle:checked + .hamburger-menu .top {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-top: 15px;
+}
+
+#toggle:checked + .hamburger-menu .meat {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-top: -7.5px;
+}
+
+#toggle:checked + .hamburger-menu .bottom {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+@media only screen and (max-width: 594px) {
+    .right-container {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show only on small screens */
+        margin-top: 20px;
+    }
+
+    .menu-items {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 444px) {
+    .right-container {
+        align-items: center;
+    }
+}
