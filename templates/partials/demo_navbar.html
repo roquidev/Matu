@@ -1,58 +1,102 @@
 {% load static %} {% load i18n %}
 
-<nav class="header-component">
-    <div class="left-container">
-        <div class="matu-logo"><a href="{% url 'home' %}">Matu</a></div>
-        <div class="button-container">
-            <button type="button" class="left-button">
-                <img
-                    class="experiences-icon"
-                    alt="about-icon"
-                    src="{% static 'img/experiences-icon.svg' %}"
-                />
-                <div class="button-text">
-                    <a href="{% url 'home' %}">Experiencias</a>
-                </div>
-            </button>
+<header
+    id="header-component"
+    class="navbar navbar-expand-lg bg-body-tertiary  pt-10"
+>
+    <a class="matu-logo navbar-brand" href="{% url 'home' %}">Matu</a>
 
-            <button type="button" class="left-button">
-                <img
-                    class="about-icon"
-                    alt="about-icon"
-                    src="{% static 'img/about-icon.svg' %}"
-                />
-                <div class="button-text">
-                    <a href="{% url 'home' %}">About us</a>
-                </div>
-            </button>
+    <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#toggleNavBar"
+        aria-controls="toggleNavBar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+    >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="right-container collapse navbar-collapse" id="toggleNavBar">
+        <div class="left-container">
+            <ul class="left-container navbar-nav m-auto d-flex gap-3">
+                <li class="nav-item">
+                    <div class="left-button">
+                        <img
+                            class="header-icon experiences-icon"
+                            alt="about-icon"
+                            src="{% static 'img/experiences-icon.svg' %}"
+                        />
+                        <a class="button-text" aria-current="page" href="/"
+                            >Experiencias</a
+                        >
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="left-button">
+                        <img
+                            class="header-icon about-icon"
+                            alt="about-icon"
+                            src="{% static 'img/about-icon.svg' %}"
+                        />
+
+                        <a class="button-text" aria-current="page" href="/demo"
+                            >About us</a
+                        >
+                    </div>
+                </li>
+            </ul>
         </div>
-    </div>
 
-    <div class="right-container">
-        <!-- Hamburger Menu Icon -->
-        <input id="toggle" type="checkbox" />
-        <label class="hamburger-menu" for="toggle">
-            <span class="top"></span>
-            <span class="meat"></span>
-            <span class="bottom"></span>
-        </label>
-
-        <div class="menu-items">
+        <ul class="button-container navbar-nav">
             {% if user.is_authenticated %}
-            <a href="account/register_agency" class="right-button"
-                >Enlista tu agencia</a
-            >
-            {% else %}
-            <!-- Registrarse -->
-            <a href="{% url 'account_signup' %}" class="right-button"
-                >{% trans "Sign Up" %}</a
-            >
-            <!-- Iniciar Sesion -->
-            <a href="{% url 'account_login' %}" class="right-button"
-                >{% trans "Sign In" %}</a
-            >
-            {% endif %}
-        </div>
-    </div>
-</nav>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'register_agency' %}"
+                    ><strong>Registra tu Agencia</strong></a
+                >
+            </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_logout' %}"
+                    >{% trans "Sign Out" %}</a
+                >
+                <!-- Cerrar sesion -->
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'view_profile' %}">
+                    {% if logo_url %}
+                    <strong>{{ user.username|upper }}</strong>
+                    <img
+                        src="{{ logo_url }}"
+                        alt="mdo"
+                        width="32"
+                        height="32"
+                        class="rounded-circle"
+                    />
+                    {% else %}
+                    <strong>{{ user.username|upper }}</strong>
+                    {% endif %}
+                </a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a
+                    class="right-button nav-link"
+                    href="{% url 'account_signup' %}"
+                    >{% trans "Sign Up" %}</a
+                >
+                <!-- Registrarse -->
+            </li>
+            <li class="nav-item">
+                <a
+                    class="right-button nav-link"
+                    href="{% url 'account_login' %}"
+                    >{% trans "Sign In" %}</a
+                >
+                <!-- Iniciar Sesion-->
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</header>
