@@ -51,3 +51,19 @@
 .right-section {
     flex-grow: 0;
 }
+
+.reduce-gap {
+    gap: 3rem;
+}
+
+@media only screen and (max-width: 991px) {
+    .reduce-gap {
+        gap: 0rem !important;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .reduce-gap {
+        gap: 2rem;
+    }
+}
