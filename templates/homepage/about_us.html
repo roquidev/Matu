@@ -6,25 +6,84 @@
 
 {% block custom_styles %}
     <link rel="stylesheet" href="{% static 'demo/crud.css' %}">
+    <link rel="stylesheet" href="{% static 'demo/about_us.css' %}">
+    <link rel="stylesheet" href="{% static 'demo/footer.css' %}">
+
 {% endblock custom_styles %}
 
 {% block content %}
-  <div class="row text-center">
-    <h1 style="text-align: center;">Our story</h1>
-
-    {% for post in posts %}
-      <div class="col-md-4 p-4">
-        <div class="card card-project">
-          <img src="{{ post.image.url }}" alt="{{ post.title }}" class="card-img-top" style="height: 250px;" />
-          <hr>
-          <div class="card-body">
-            <h1 style="font-size: 1.8rem;">{{ post.title }}</h1>
-            <p>{{ post.description|striptags|truncatechars:200 }}</p>
-            <p><i>Publicado {{ post.timestamp|naturaltime }}</i></p>
-            <a href="{% url 'post_detail' post.id %}" class="btn btn-detail rounded-3 col-md-8">Ver mas</a>
+  <div class="container">
+    <h1 class="text-center mb-5">Equipo de fundadores</h1>
+    <div class="row row-cols-1 row-cols-md-1 row-cols-lg-4 g-4">
+      {% for founder in founders %}
+        <div class="col text-center">
+          <div class="founder-card">
+            <img class="founder-photo" src="{{ founder.photo }}" alt="{{ founder.name }}">
+  
+            <h3>{{ founder.name }}</h3>
+            <p>{{ founder.location }}</p>
+            <p>{{ founder.education }}</p>
+            <p>{{ founder.current_status }}</p>
+            {% if founder.internships %}
+              <h4>Internships:</h4>
+              <ul class="internships-list">
+                {% for inter in founder.internships %}
+                  <li class="internships-item"><span>{{ inter }}</span></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+            {% if founder.experience %}
+              <h4>Experiencia:</h4>
+              <ul class="experience-list">
+                {% for exp in founder.experience %}
+                <li class="experience-item">{{ exp }}</li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+              <p><strong>Fun Fact:</strong> {{ founder.fun_fact }}</p>
+              <p><strong>Usar Matu:</strong> {{ founder.use_matu }}</p>
+            </div>
           </div>
+          {% endfor %}
         </div>
+        
+        <h1 class="text-center mb-5">Aliados</h1>
+
+        <div class="row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4">
+        {% for contributor in contributors %}
+          <div class="col text-center">
+            <div class="founder-card">
+              <img class="founder-photo" src="{{ contributor.photo }}" alt="{{ contributor.name }}">
+    
+              <h2>{{ contributor.name }}</h2>
+              <p>{{ contributor.location }}</p>
+              <p>{{ contributor.education }}</p>
+              <p>{{ contributor.current_status }}</p>
+              {% if contributor.internships %}
+                <h3>Internships:</h3>
+                <ul class="internships-list">
+                  {% for inter in contributor.internships %}
+                    <li class="founders-item"><span>{{ inter }}</span></li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+              {% if contributor.experience %}
+                <h3>Experiencia:</h3>
+                <ul class="experience-list">
+                  {% for exp in contributor.experience %}
+                    <li class="experience-item">{{ exp }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+              <p>Fun Fact: {{ contributor.fun_fact }}</p>
+              <p>Usar Matu: {{ contributor.use_matu }}</p>
+            </div>
+          </div>
+        {% endfor %}
       </div>
-    {% endfor %}
-  </div>
+    </div>
 {% endblock %}
+
+{% block footer %}
+  {% include "partials/footer.html" %}
+{% endblock footer %}
