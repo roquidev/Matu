@@ -5,14 +5,82 @@
 */
 /* Section Hero */
 .slogan-title {
+    margin-top: 0;
     font-size: 3rem;
-    color: #204b97;
+    color: #ff9900;
     font-weight: 600;
+    text-align: start;
+    margin-bottom: 3rem;
 }
 
 .slogan-subtitle {
     margin-top: 10px;
+    font-size: 1.5rem;
     font-style: italic;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 4rem;
 }
 
 /* End Section Hero */
+
+
+/* Buttons Styles */
+.cta-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
+    border-radius: 5px;
+    width: 15rem;
+    height: 3.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.5s, color 0.5;
+    font-size: 20;
+}
+
+
+.btn-cta_register_agency {
+    background-color: #ff9900;
+    color: #FFFF;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 15px;
+}
+
+.btn-cta_register_agency:hover {
+    color: #ff9900;
+    background-color: hsl(36, 100%, 50%, 0.08);
+    font-weight: 500;
+    border: 2.5px solid;
+    border-radius: 15px;
+}
+
+.btn-cta_search {
+    background-color: #FFFF;
+    color: #ff9900;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 15px;
+    border: 2.5px solid;
+    border-radius: 15px;
+}
+
+.btn-cta_search:hover {
+    color: #ff9900;
+    background-color: hsl(36, 100%, 50%, 0.08);
+    font-weight: 500;
+    border: 2.5px solid;
+    border-radius: 15px;
+}
+
+
+/* End Buttons Styles */
