@@ -1,5 +1,13 @@
+:root {
+    --primary-color: #f7ad45;
+    --secondary-color: #ffb066;
+    --text-color: #fff;
+    --button-radius: 24px;
+    --hover-color: #ffc48d;
+}
+
 #footer {
-    background: #222;
+    background: var(--primary-color);
     color: #fff;
     padding: 30px 0;
 }
@@ -10,14 +18,16 @@
 
 .footer-top h3 {
     color: #fff;
-    font-size: 32px;
+    font-size: 3rem;
     margin-bottom: 20px;
+    font-family: Motiva-Bold;
 }
 
 .footer-top p {
-    font-size: 14px;
+    font-size: 1.3rem;
     line-height: 24px;
-    color: #ccc;
+    font-family: Motiva-Light;
+    margin-bottom: 2%;
 }
 
 .footer-newsletter input[type="email"] {
@@ -29,10 +39,13 @@
 
 .footer-newsletter input[type="submit"] {
     background: #fab800;
-    color: #fff;
     padding: 10px 15px;
     border: none;
     cursor: pointer;
+}
+
+.footer-newsletter {
+    margin-bottom: 2%;
 }
 
 .social-links {
@@ -45,7 +58,6 @@
 .social-links a {
     font-size: 24px;
     margin: 0 10px;
-    color: #fff;
     transition: color 0.3s ease-in-out;
     text-decoration: none;
 }
@@ -56,13 +68,12 @@
 
 .footer-bottom {
     padding-top: 20px;
-    border-top: 1px solid #444;
+    border-top: 1px solid #ffffff;
 }
 
 .footer-bottom .copyright,
 .footer-bottom .credits {
     font-size: 14px;
-    color: #ccc;
 }
 
 .footer-bottom .credits a {
@@ -70,6 +81,7 @@
     text-decoration: none;
 }
 
- .footer-bottom .credits a:hover {
+.footer-bottom .credits a:hover {
     text-decoration: underline;
 }
+
