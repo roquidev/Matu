@@ -6,91 +6,10 @@
 
 {% block content %}
 <!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex align-items-center">
-
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <div class="slogan-container">
-            <h1 class="slogan-title" style="line-height: 1.2; font-size: 60px;">Un marketplace para agencias de turismo</h1>
-            <h3 class="slogan-subtitle">Centralizamos las agencias de turismo locales de los mayores destinos turísticos del mundo de forma simple y amigable</h3>
-            <div class="d-flex flex-column align-items-center"> <!-- Change the container to a column layout -->
-              <a href="/demo" class="btn-get-started scrollto">Join waitlist</a> <!-- Move the button above the image -->
-              <img src="{% static 'img/phone-landing.png' %}" alt="Phone Image" class="centered-image">
-            </div>
-          
-            <div class="container text-center mt-5"> <!-- Add a container for the new content -->
-              <div class="row">
-                  <div class="col-md-8"> <!-- Increase the width of the left column -->
-                      <p class="text-medium-new text-bold" style="font-size: 45px;">Voluptatum deleniti atque corrupti quos dolores et quas</p> <!-- Use the new class for the text -->
-                      <img src="{% static 'img/2nd-image-landing.png' %}" alt="Second Image" class="img-fluid-new"> <!-- Use the new class for the image -->
-                  </div>
-              </div>
-            </div>
-
-            <div class="container text-center mt-5"> <!-- Add a container for the new content -->
-              <div class="row">
-                  <div class="col-md-8"> <!-- Increase the width of the left column -->
-                      <p class="text-medium-new text-bold" style="font-size: 45px;">Voluptatum deleniti atque corrupti quos dolores et quas</p> <!-- Use the new class for the text -->
-                      <img src="{% static 'img/3rd-img-landing.png' %}" alt="Second Image" class="img-fluid-new"> <!-- Use the new class for the image -->
-                  </div>
-              </div>
-            </div>
-
-            <div class="container text-center mt-5"> <!-- Add a container for the new content -->
-              <div class="row">
-                  <div class="col-md-8"> <!-- Increase the width of the left column -->
-                      <p class="text-medium-new text-bold" style="font-size: 45px;">Voluptatum deleniti atque corrupti quos dolores et quas</p> <!-- Use the new class for the text -->
-                      <img src="{% static 'img/2nd-image-landing.png' %}" alt="Second Image" class="img-fluid-new"> <!-- Use the new class for the image -->
-                  </div>
-              </div>
-            </div>
-
-
-
-
-        </div>
-        <!-- <div class="col-lg-6 order-1 order-lg-2 hero-img">
-          <img src="{% static 'img/travel-the-world.jpg' %}" class="img-fluid animated" alt="">
-        </div> -->
-      </div>
-    </div>
-  </section>
 
 <!-- End Hero -->
 
 <main id="main">
-    <!-- ======= Featured Services Section ======= -->
-    <section id="featured-services" class="featured-services">
-        <div class="container">
-  
-          <div class="row">
-            <div class="col-lg-4 col-md-6">
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-laptop"></i></div>
-                <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-card-checklist"></i></div>
-                <h4 class="title"><a href="">Dolor Sitema</a></h4>
-                <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-clipboard-data"></i></div>
-                <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-      <!-- End Featured Services Section -->
 
 </main>
 
@@ -102,6 +21,12 @@
   {% endfor %}
 
 {% endblock content %}
+
+{% block features %}
+  {% include "partials/features.html" %}
+{% endblock features %}
+
+
 
 {% block footer %}
   {% include "partials/footer.html" %}

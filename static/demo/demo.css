@@ -16,11 +16,10 @@ body {
     flex-direction: column;
     align-items: center;
     color: #fff;
-    font-family: Motiva-Light;
+    font-family: Motiva-Bold;
 }
 
 .main-content {
-    margin-top: 95px;
     display: flex;
     flex-direction: column;
     align-items: center;

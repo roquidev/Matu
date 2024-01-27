@@ -97,6 +97,7 @@ button:hover {
     font-weight: 900;
     text-decoration: none;
     border-radius: 10px;
+    font-family: "sans-serif";
 }
 
 .right-button:hover {

@@ -1,0 +1,53 @@
+:root {
+    --primary-color: #fd9f48;
+    --secondary-color: #ffb066;
+    --text-color: #fff;
+    --button-radius: 24px;
+    --hover-color: #ffc48d;
+}
+
+.navbarlanding {
+    background-color: #fd9f48 !important; /* New orange color */
+}
+
+.navbar .nav-link {
+    color: #ffff; /* Replace with your desired color */
+}
+
+.navbar .nav-link-active {
+    color: #ffff; /* Replace with your desired color */
+}
+
+.navbar .navbar-brand {
+    color: #ffff;
+    font-size: 45px; /* You can adjust the font size as needed */
+    font-weight: bold; /* Make the text bold */
+}
+
+.right-button {
+    width: 9em;
+    height: 3.5rem;
+    border: 1px solid var(--primary-color);
+    background-color: var(--text-color);
+    color: var(--primary-color) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.right-container {
+    display: flex;
+    gap: 5%;
+}
+
+.center-button {
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+.right-section {
+    flex-grow: 0;
+}

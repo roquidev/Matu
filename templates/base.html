@@ -42,8 +42,9 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="{% static 'landing/headers.css' %}" rel="stylesheet">
+    <link href="{% static 'landing/header.css' %}" rel="stylesheet">
     <link href="{% static 'landing/homeBody.css' %}" rel="stylesheet">
+    <link href="{% static 'landing/features.css' %}" rel="stylesheet">
 
     {% block custom_styles %}{% endblock custom_styles %}
   
@@ -57,6 +58,9 @@
         {% block content %}
         {% endblock content %}
       </div>
+      {% block features %}
+      {% endblock features %}
+
       {% block footer %}
       {% endblock footer %}
     </main>

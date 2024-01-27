@@ -1,0 +1,159 @@
+@font-face {
+    font-family: Motiva-Light;
+    src: local("Motiva-Sans-Light"),
+        url("../fonts/Motiva-Sans-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Motiva-Bold;
+    src: local("Motiva-Sans-Bold"),
+        url("../fonts/Motiva-Sans-Bold.ttf") format("truetype");
+}
+
+/* Style for the features section */
+#features {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+/* Style for each feature row */
+.feature-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20%;
+    align-items: center;
+}
+
+/* Style for the feature image container */
+.feature-image {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Style for the feature image */
+.feature-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style for the feature text container */
+.feature-text {
+    flex: 1;
+    padding: 10px;
+}
+
+/* Style for the big text in each feature */
+.feature-text h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: Motiva-Bold;
+}
+
+/* Style for the small text in each feature */
+.feature-text p {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    font-family: Motiva-Light;
+}
+
+@media screen and (max-width: 2000px) {
+    .glass-image {
+        width: 50%;
+        height: auto;
+    }
+
+    .ticket-image {
+        width: 80%;
+        height: auto;
+    }
+
+    .landing-shield {
+        width: 50%;
+        height: auto;
+    }
+
+    .growth-image {
+        width: 80%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 1310px) {
+    .glass-image {
+        width: 60%;
+        height: auto;
+    }
+
+    .landing-shield {
+        width: 60%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 1220px) {
+    .ticket-image {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .feature-text h2 {
+        font-size: 2rem;
+    }
+
+    /* Style for the small text in each feature */
+    .feature-text p {
+        font-size: 1.2rem;
+    }
+
+    .glass-image {
+        width: 70%;
+        height: auto;
+    }
+
+    .ticket-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .landing-shield {
+        width: 70%;
+        height: auto;
+    }
+
+    .growth-image {
+        width: 110%;
+        height: auto;
+    }
+
+    .positions-image {
+        width: 120%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .feature-row {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50%;
+        align-items: center;
+    }
+
+    .feature-text h2 {
+        text-align: center;
+    }
+
+    .feature-text p {
+        text-align: center;
+    }
+
+    .feature-text {
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+}
