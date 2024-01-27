@@ -1,7 +1,8 @@
 {% load static %}
-<main class="container pt-5 vh-100">
-    <div class="p-4 p-md-5 mb-4 row vh-100">
-        <div class="col-md-6 px-0">
+
+<main class="main-component container pt-5 vh-100">
+    <div class="main-container p-4 p-md-5 mb-4 row vh-100">
+        <div class="slogan-container col-md-6 px-0">
             <h1 class="display-4 slogan-title">
                 Revolucionando la forma en la que planeas y encuentras tus paquetes de viaje y experiencias
             </h1>
@@ -13,10 +14,10 @@
                 <a href="{% url 'demo' %}" class="btn btn-cta_search">Find your agency</a>
             </p>
         </div>
-        <div class="col-md-6 px-0">
+        <div class="image-container col-md-6 px-0">
             <div class="landing-app_image">
                 <img
-                    class="rotate-90"
+                    class="app-image"
                     src="{% static 'img/landing/landing-app.png' %}"
                     alt="Matu Appe"
                 />

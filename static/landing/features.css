@@ -146,14 +146,28 @@
 
     .feature-text h2 {
         text-align: center;
+        font-size: 2.5rem;
     }
 
     .feature-text p {
         text-align: center;
+        font-size: 1.5rem;
     }
 
     .feature-text {
         margin-bottom: 5%;
         margin-top: 5%;
     }
+}
+
+@media only screen and (max-width: 450px) {
+
+    .feature-text h2 {
+        font-size: 2rem;
+    }
+
+    .feature-text p {
+        font-size: 1.2rem;
+    }
+
 }

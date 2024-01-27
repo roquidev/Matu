@@ -1,0 +1,121 @@
+.landing-app_image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+.main-component {
+    margin-bottom: 10%;
+}
+
+.slogan-subtitle {
+    text-align: left !important;
+}
+
+.slogan-title {
+    font-family: Motiva-Bold;
+    font-size: 3.5rem !important;
+}
+
+.cta-btns {
+    gap: 5%;
+    margin-top: 0 !important;
+    margin-bottom: 10%;
+}
+
+@media only screen and (max-width: 1045px) {
+    .landing-app_image {
+        margin-left: 15%;
+    }
+
+    .vh-100 {
+        height: auto !important;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .slogan-title,
+    .slogan-subtitle {
+        text-align: center !important;
+    }
+
+    .main-container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .slogan-container {
+        width: 100%;
+    }
+
+    .cta-btns {
+        margin-top: 0 !important;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    .landing-app_image {
+        margin-top: 0%;
+    }
+}
+
+@media only screen and (max-width: 1282px) {
+    .cta-btns {
+        gap: 4%;
+    }
+}
+
+@media only screen and (max-width: 676px) {
+    .slogan-title {
+        font-size: 3rem !important;
+    }
+}
+
+@media only screen and (max-width: 578px) {
+    .slogan-container {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+
+    .slogan-title {
+        font-size: 2.5rem !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .slogan-container {
+        padding-left: 10% !important;
+        padding-right: 10% !important;
+    }
+
+    .btn,
+    .btn {
+        width: 50% !important;
+    }
+
+    .app-image {
+        width: 70%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .slogan-title {
+        font-size: 2rem !important;
+    }
+
+    .slogan-subtitle {
+        font-size: 1.3rem !important;
+    }
+}
