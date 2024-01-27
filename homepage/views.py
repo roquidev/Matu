@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
 from django.contrib.auth.decorators import login_required
+import json
 
 
 # Create your views here.
@@ -33,6 +34,19 @@ def profile(request):
         context={}
     )
 
+
+def about_us(request):
+    with open('founders_data.json', "r", encoding="utf-8") as json_file:
+        matu_team_data = json.load(json_file)
+    context = {
+        "founders": matu_team_data.get("founders"),
+        "contributors": matu_team_data.get("contributors"),
+    }
+    return render(
+        request=request,
+        template_name="homepage/about_us.html",
+        context=context
+    )
 
 # def signup(request):
 #     if request.method == "GET":

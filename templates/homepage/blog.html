@@ -6,6 +6,7 @@
 
 {% block custom_styles %}
     <link rel="stylesheet" href="{% static 'demo/crud.css' %}">
+    <link rel="stylesheet" href="{% static 'demo/footer.css' %}">
 {% endblock custom_styles %}
 
 {% block content %}
@@ -28,3 +29,7 @@
     {% endfor %}
   </div>
 {% endblock %}
+
+{% block footer %}
+  {% include "partials/footer.html" %}
+{% endblock footer %}

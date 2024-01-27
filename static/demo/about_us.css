@@ -1,0 +1,26 @@
+.founder-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.founder-photo {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.experience-list {
+    list-style: none;
+    padding: 0;
+}
+
+.experience-item {
+    margin-bottom: 5px;
+}
+
+.internships-list {
+    list-style: none;
+    padding: 0;
+}
