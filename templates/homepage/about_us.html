@@ -24,27 +24,11 @@
             <p>{{ founder.location }}</p>
             <p>{{ founder.education }}</p>
             <p>{{ founder.current_status }}</p>
-            {% if founder.internships %}
-              <h4>Internships:</h4>
-              <ul class="internships-list">
-                {% for inter in founder.internships %}
-                  <li class="internships-item"><span>{{ inter }}</span></li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-            {% if founder.experience %}
-              <h4>Experiencia:</h4>
-              <ul class="experience-list">
-                {% for exp in founder.experience %}
-                <li class="experience-item">{{ exp }}</li>
-                {% endfor %}
-              </ul>
-              {% endif %}
-              <p><strong>Fun Fact:</strong> {{ founder.fun_fact }}</p>
-              <p><strong>Usar Matu:</strong> {{ founder.use_matu }}</p>
+
             </div>
           </div>
           {% endfor %}
+
         </div>
         
         <h1 class="text-center mb-5">Aliados</h1>
@@ -59,24 +43,7 @@
               <p>{{ contributor.location }}</p>
               <p>{{ contributor.education }}</p>
               <p>{{ contributor.current_status }}</p>
-              {% if contributor.internships %}
-                <h3>Internships:</h3>
-                <ul class="internships-list">
-                  {% for inter in contributor.internships %}
-                    <li class="founders-item"><span>{{ inter }}</span></li>
-                  {% endfor %}
-                </ul>
-              {% endif %}
-              {% if contributor.experience %}
-                <h3>Experiencia:</h3>
-                <ul class="experience-list">
-                  {% for exp in contributor.experience %}
-                    <li class="experience-item">{{ exp }}</li>
-                  {% endfor %}
-                </ul>
-              {% endif %}
-              <p>Fun Fact: {{ contributor.fun_fact }}</p>
-              <p>Usar Matu: {{ contributor.use_matu }}</p>
+
             </div>
           </div>
         {% endfor %}

@@ -6,9 +6,6 @@
         "education": "COAR Cusco, Dartmouth College",
         "current_status": "Estudiante de Economía",
         "experience": ["Investigación", "Venture Capital", "Management Consulting"],
-        "fun_fact": "Once I bought a 2-dollar lottery ticket, and I ended up winning 2 dollars.",
-        "use_matu": "Me encantaría usar Matu para visitar Río de Janeiro en Brasil y Estambul en Turquía",
-        "internships": ["EY-Parthenon", "Blum SAF", "Salkantay Ventures"],
         "photo": "https://media.licdn.com/dms/image/D4E03AQGVDYbdlsfS1Q/profile-displayphoto-shrink_800_800/0/1682701615970?e=1711584000&v=beta&t=3LB_G_5Z0bsev5MnYqK9gZLPBmKrYIWhsh1TFi6R2Ds"
       },
       {
@@ -16,9 +13,6 @@
         "location": "Lima, Perú",
         "education": "Georgia Institute of Technology",
         "current_status": "Estudiante de Computer Science",
-        "experience": ["Investigaciones relacionadas con inteligencia artificial", "Implementacion de algoritmos de ML"],
-        "fun_fact": "Me apasiona la música y disfruto de tocar el piano, guitarra y saxofón.",
-        "use_matu": "Me emociona la idea de utilizar Matu para explorar Kyoto en Japón o Sydney en Australia.",
         "photo": "https://media.licdn.com/dms/image/D4E03AQEY9OZiOxqzXw/profile-displayphoto-shrink_800_800/0/1677607004925?e=1711584000&v=beta&t=96EnJpn1t9BiGAnqX21zJNTXw7eTW25QO00UJSVeHTw"
       },
       {
@@ -26,21 +20,13 @@
         "location": "Cusco, Perú",
         "education": "Universidad de Piura",
         "current_status": "Estudiante de Ingeniería Civil",
-        "skills": ["Programador autodidacta", "Proyectos de Ciencia de Datos"],
-        "fun_fact": "Soy introvertido pero háblame de datos y la charla será eterna.",
-        "internships": ["Neoris for BBVA"],
-        "experience": ["Data Science & Engineering", "Artificial Intelligence", "Programming"],
-        "use_matu": "Me encantaría en un futuro cercano usar Matu para conocer amigos.",
         "photo": "https://avatars.githubusercontent.com/u/82121775?v=4"
       },
       {
         "name": "Yamil Quispe",
         "location": "Lima, Perú",
         "education": "Georgia Institute of Technology",
-        "current_status": "Estudiante de Computer Science (tercer año)",
-        "internships": ["Speak, by OpenAI", "Chegg", "Bain & Co."],
-        "fun_fact": "Formé parte de la selección nacional de basketball del Perú.",
-        "use_matu": "Me encantaría usar Matu para visitar Bangalore en India o Seúl en Corea del Sur.",
+        "current_status": "Estudiante de Computer Science",
         "photo": "https://media.licdn.com/dms/image/C4D03AQFNh48rJ33ejw/profile-displayphoto-shrink_800_800/0/1646798629683?e=1711584000&v=beta&t=K02eXb8Q2AWDusLRTyPoxNN9oXc62RA2jwEilcKpbk8"
       }
     ],
@@ -50,10 +36,6 @@
         "location": "Cusco, Perú",
         "education": "COAR Cusco, Dartmouth College",
         "current_status": "Estudiante de Economía",
-        "experience": ["Investigación", "Venture Capital", "Management Consulting"],
-        "fun_fact": "Once I bought a 2-dollar lottery ticket, and I ended up winning 2 dollars.",
-        "use_matu": "Me encantaría usar Matu para visitar Río de Janeiro en Brasil y Estambul en Turquía",
-        "internships": ["EY-Parthenon", "Blum SAF", "Salkantay Ventures"],
         "photo": "https://media.licdn.com/dms/image/D4E03AQGVDYbdlsfS1Q/profile-displayphoto-shrink_800_800/0/1682701615970?e=1711584000&v=beta&t=3LB_G_5Z0bsev5MnYqK9gZLPBmKrYIWhsh1TFi6R2Ds"
       },
       {
@@ -61,9 +43,6 @@
         "location": "Lima, Perú",
         "education": "Georgia Institute of Technology",
         "current_status": "Estudiante de Computer Science",
-        "experience": ["Investigaciones relacionadas con inteligencia artificial", "Implementacion de algoritmos de ML"],
-        "fun_fact": "Me apasiona la música y disfruto de tocar el piano, guitarra y saxofón.",
-        "use_matu": "Me emociona la idea de utilizar Matu para explorar Kyoto en Japón o Sydney en Australia.",
         "photo": "https://media.licdn.com/dms/image/D4E03AQEY9OZiOxqzXw/profile-displayphoto-shrink_800_800/0/1677607004925?e=1711584000&v=beta&t=96EnJpn1t9BiGAnqX21zJNTXw7eTW25QO00UJSVeHTw"
       },
       {
@@ -71,11 +50,6 @@
         "location": "Cusco, Perú",
         "education": "Universidad de Piura",
         "current_status": "Estudiante de Ingeniería Civil",
-        "skills": ["Programador autodidacta", "Proyectos de Ciencia de Datos"],
-        "fun_fact": "Soy introvertido pero háblame de datos y la charla será eterna.",
-        "internships": ["Neoris for BBVA"],
-        "experience": ["Data Science & Engineering", "Artificial Intelligence", "Programming"],
-        "use_matu": "Me encantaría en un futuro cercano usar Matu para conocer amigos.",
         "photo": "https://avatars.githubusercontent.com/u/82121775?v=4"
       }
     ]
