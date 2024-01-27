@@ -2,6 +2,12 @@
 
 {% load static %}
 
+{% block custom_styles %}
+    <link rel="stylesheet" href="{% static 'demo/main.css' %}">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="stylesheet" href="{% static 'demo/footer.css' %}">
+{% endblock custom_styles %}
+
 {% block title %}Home{% endblock title %}
 
 {% block content %}
@@ -21,6 +27,10 @@
   {% endfor %}
 
 {% endblock content %}
+
+{% block main %}
+  {% include "partials/main.html" %} 
+{% endblock main %}
 
 {% block features %}
   {% include "partials/features.html" %}
