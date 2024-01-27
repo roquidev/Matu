@@ -34,6 +34,14 @@ def profile(request):
     )
 
 
+def about_us(request):
+    context = {}
+    return render(
+        request=request,
+        template_name="homepage/about_us.html",
+        context=context
+    )
+
 # def signup(request):
 #     if request.method == "GET":
 #         return render(
