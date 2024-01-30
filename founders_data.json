@@ -2,6 +2,7 @@
     "founders": [
       {
         "name": "Luis Cusihuallpa",
+        "description": "Mi nombre es Luis, también me pueden llamar Tino. Soy de Cusco, Perú. Egresé del COAR Cusco, y actualmente soy un estudiante de Economía en Dartmouth College. Tengo experiencia previa en economic research, venture capital, y management consulting.",
         "location": "Cusco, Perú",
         "education": "COAR Cusco, Dartmouth College",
         "current_status": "Estudiante de Economía",
@@ -10,13 +11,15 @@
       },
       {
         "name": "Hans Ibarra",
+        "description": "Mi nombre es Hans Ibarra Quispe, originario de Lima, Perú. Actualmente, soy un estudiante del Georgia Institute of Technology terminando su primer año en Computer Science. He tenido la oportunidad de participar en investigaciones relacionadas al mundo de la física, implementando algoritmos de inteligencia artificial.",
         "location": "Lima, Perú",
         "education": "Georgia Institute of Technology",
         "current_status": "Estudiante de Computer Science",
         "photo": "https://media.licdn.com/dms/image/D4E03AQEY9OZiOxqzXw/profile-displayphoto-shrink_800_800/0/1677607004925?e=1711584000&v=beta&t=96EnJpn1t9BiGAnqX21zJNTXw7eTW25QO00UJSVeHTw"
       },
       {
-        "name": "Roy Quilca",
+        "name": "Roy Quillca",
+        "description": "Soy Roy de Cusco, Perú. Estudiante de ingeniería civil en la Universidad de Piura y programador autodidacta enfocado en proyectos de ciencia de datos. Trabajé como data engineer en una consultora tecnológica y he sido freelancer en el último par de años.",
         "location": "Cusco, Perú",
         "education": "Universidad de Piura",
         "current_status": "Estudiante de Ingeniería Civil",
@@ -24,6 +27,7 @@
       },
       {
         "name": "Yamil Quispe",
+        "description": "Mi nombre es Yamil Quispe Silva, y soy de Lima, Perú. Actualmente, estoy en el tercer año de la carrera de computer science en Georgia Tech en Atlanta. He realizado prácticas profesionales en software engineering y product management en Chegg y en Speak (largest OpenAI portfolio company).",
         "location": "Lima, Perú",
         "education": "Georgia Institute of Technology",
         "current_status": "Estudiante de Computer Science",
@@ -33,6 +37,7 @@
     "contributors": [
       {
         "name": "Fabio Casapino",
+        "description": "¡Hola! Mi nombre es Fabio Casapino.Soy un emprendedor, inversor y trader apasionado por los invaluables beneficios de la educación financiera. Como muchos chibolos nacidos en Cusco, Perú, aprendí a vivir buscando oportunidades. Tengo muchas metas y aspiraciones para el futuro, y ese futuro puede ser tan pronto como yo lo decida.",
         "location": "Cusco, Perú",
         "education": "COAR Cusco, Dartmouth College",
         "current_status": "Estudiante de Economía",
@@ -40,17 +45,11 @@
       },
       {
         "name": "Eduardo Andrade",
+        "description": "",
         "location": "Lima, Perú",
         "education": "Georgia Institute of Technology",
         "current_status": "Estudiante de Computer Science",
         "photo": "https://media.licdn.com/dms/image/D4E03AQEY9OZiOxqzXw/profile-displayphoto-shrink_800_800/0/1677607004925?e=1711584000&v=beta&t=96EnJpn1t9BiGAnqX21zJNTXw7eTW25QO00UJSVeHTw"
-      },
-      {
-        "name": "Roy Quilca",
-        "location": "Cusco, Perú",
-        "education": "Universidad de Piura",
-        "current_status": "Estudiante de Ingeniería Civil",
-        "photo": "https://avatars.githubusercontent.com/u/82121775?v=4"
       }
     ]
   }

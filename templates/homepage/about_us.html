@@ -6,43 +6,38 @@
 
 {% block custom_styles %}
     <link rel="stylesheet" href="{% static 'demo/crud.css' %}">
-    <link rel="stylesheet" href="{% static 'landing/about_us.css' %}">
     <link rel="stylesheet" href="{% static 'landing/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'landing/about_us.css' %}">
 
 {% endblock custom_styles %}
 
 {% block content %}
   <div class="container">
-    <h1 class="text-center mb-5">Equipo de fundadores</h1>
+    <h1 class="text-center mb-5 main_title">Founders</h1>
     <div class="row row-cols-1 row-cols-md-1 row-cols-lg-4 g-4">
       {% for founder in founders %}
         <div class="col text-center">
           <div class="founder-card">
             <img class="founder-photo" src="{{ founder.photo }}" alt="{{ founder.name }}">
-  
-            <h3>{{ founder.name }}</h3>
-            <p>{{ founder.location }}</p>
-            <p>{{ founder.education }}</p>
-            <p>{{ founder.current_status }}</p>
-
+            <h3 class="card-title pb-3">{{ founder.name }}</h3>
+            <p>{{ founder.description }}</p>
+            <p>{{ founder.fun_fact }}</p>
             </div>
           </div>
           {% endfor %}
 
         </div>
         
-        <h1 class="text-center mb-5">Aliados</h1>
+        <h1 class="text-center mb-5 main_title mt-5">Interns</h1>
 
-        <div class="row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4">
+        <div class="col-md-6 m-auto row row-cols-1 row-cols-md-1 row-cols-lg-2 g-2 mb-5">
         {% for contributor in contributors %}
           <div class="col text-center">
             <div class="founder-card">
               <img class="founder-photo" src="{{ contributor.photo }}" alt="{{ contributor.name }}">
     
-              <h2>{{ contributor.name }}</h2>
-              <p>{{ contributor.location }}</p>
-              <p>{{ contributor.education }}</p>
-              <p>{{ contributor.current_status }}</p>
+              <h2 class="card-title pb-3">{{ contributor.name }}</h2>
+              <p>{{ contributor.description }}</p>
 
             </div>
           </div>

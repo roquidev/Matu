@@ -77,11 +77,12 @@
 }
 
 .footer-bottom .credits a {
-    color: #fab800;
+    color: #FFFF;
     text-decoration: none;
 }
 
 .footer-bottom .credits a:hover {
-    text-decoration: underline;
+    color: #fff;
+    font-weight: 600;
 }
 

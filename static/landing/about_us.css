@@ -1,13 +1,34 @@
+:root {
+    --primary-color: #f7ad45;
+    --secondary-color: #ffb066;
+    --main-font-color: #fd9f48;
+    --text-color: #fff;
+    --button-radius: 24px;
+    --hover-color: #ffc48d;
+}
+
+.main_title {
+    color: var(--main-font-color);
+}
+
+.card-title {
+    color: #ffffff;
+}
+
 .founder-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background-color: var(--hover-color);
+    border: 2.5px solid var(--main-font-color);
+    border-radius: 20px;
     padding: 20px;
     margin-bottom: 20px;
+    height: 100%;
+    align-items: center;
 }
 
 .founder-photo {
     max-width: 150px;
     border-radius: 50%;
+    border: 3px solid #FFFF;
     margin-bottom: 10px;
 }
 
