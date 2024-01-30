@@ -5,12 +5,13 @@
 {% block title %} Home {%endblock title %} 
 
 {% block custom_styles %}
-<link rel="stylesheet" href="{% static 'demo/slider.css' %}" />
-<link rel="stylesheet" href="{% static 'demo/banner.css' %}" />
-<link rel="stylesheet" href="{% static 'demo/searchbox.css' %}" />
-<link rel="stylesheet" href="{% static 'demo/footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'demo/slider.css' %}" />
+    <link rel="stylesheet" href="{% static 'demo/banner.css' %}" />
+    <link rel="stylesheet" href="{% static 'demo/searchbox.css' %}" />
+    <link rel="stylesheet" href="{% static 'landing/footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'demo/header.css' %}" />
+{% endblock custom_styles %}
 
-{% endblock custom_styles %} 
 {% block content %}
 <div class="banner-component">
     <div class="slogan">
@@ -59,6 +60,7 @@
 
 </div>
 
+
 {% endblock content %}
 
 {% block footer %}
@@ -66,15 +68,15 @@
 {% endblock footer %}
 
 {% block custom_scripts %}
-<script>
-    $(document).ready(function () {
-        $(".slider").slick({
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            prevArrow: $(".prev-btn"),
-            nextArrow: $(".next-btn"),
+    <script>
+        $(document).ready(function () {
+            $(".slider").slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                prevArrow: $(".prev-btn"),
+                nextArrow: $(".next-btn"),
+            });
         });
-    });
-</script>
+    </script>
 {% endblock custom_scripts %}
 
