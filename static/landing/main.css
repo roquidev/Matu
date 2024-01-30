@@ -1,13 +1,14 @@
 .landing-app_image {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     margin-left: 20%;
     margin-top: 10%;
 }
 
 .main-component {
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .slogan-subtitle {
